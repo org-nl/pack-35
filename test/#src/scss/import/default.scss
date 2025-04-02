@@ -1,0 +1,413 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Hero Section Styles */
+.hero {
+    background-image: url('images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(106, 13, 173, 0.8) 0%, rgba(0, 0, 255, 0.8) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.bonus-amount {
+    font-size: 120px;
+    font-weight: bold;
+    color: #ffff00;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff3366;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e6005c;
+}
+
+/* Game Cards Section Styles */
+.games {
+    padding: 50px 30px;
+    background-color: #1e2130;
+}
+
+.game-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.game-card {
+    flex: 1;
+    min-width: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    border: 2px solid transparent;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    border-color: #6a0dad;
+}
+
+.game-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Section Styles */
+section {
+    padding: 50px 30px;
+    margin-bottom: 30px;
+}
+
+section h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ffffff;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+section h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, #6a0dad, #0000ff);
+}
+
+section h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+section p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #2d3142;
+}
+
+th {
+    background-color: #2d3142;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #252a3d;
+}
+
+/* First Look Section Styles */
+.first-look {
+    background-color: #1e2130;
+}
+
+.casino-info {
+    margin-top: 30px;
+}
+
+.casino-info th {
+    width: 30%;
+}
+
+/* Advantages and Disadvantages Section Styles */
+.advantages-disadvantages {
+    background-color: #1e2130;
+}
+
+.advantages-disadvantages-tables {
+    display: flex;
+    gap: 30px;
+}
+
+.advantages, .disadvantages {
+    flex: 1;
+}
+
+.advantages th {
+    background-color: #008080;
+}
+
+.disadvantages th {
+    background-color: #cc0066;
+}
+
+/* Bonus System Section Styles */
+.bonus-system {
+    background-color: #1e2130;
+    text-align: center;
+}
+
+.bonus-promo-img {
+    max-width: 100%;
+    margin: 30px 0;
+    border-radius: 10px;
+}
+
+.bonus-table {
+    margin-top: 30px;
+}
+
+/* Games Collection Section Styles */
+.games-collection {
+    background-color: #1e2130;
+}
+
+.live-games, .table-games, .slots {
+    margin-bottom: 40px;
+}
+
+/* Game Suppliers Section Styles */
+.game-suppliers {
+    background-color: #1e2130;
+}
+
+/* Design and Navigation Section Styles */
+.design-navigation {
+    background-color: #1e2130;
+}
+
+/* How to Start Playing Section Styles */
+.how-to-start {
+    background-color: #1e2130;
+    text-align: center;
+}
+
+.how-to-start-img {
+    max-width: 100%;
+    margin: 30px 0;
+    border-radius: 10px;
+}
+
+.registration-form {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #252a3d;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.phone-input, .password-input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #2d3142;
+    border-radius: 5px;
+    background-color: #1e2130;
+    color: #ffffff;
+}
+
+.form-hint {
+    font-size: 14px;
+    color: #a0a0a0;
+    margin-bottom: 15px;
+}
+
+.terms-checkbox {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.terms-checkbox input {
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.terms-checkbox label {
+    font-size: 14px;
+    color: #a0a0a0;
+}
+
+.registration-process, .login-process {
+    text-align: left;
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+/* Mobile Adaptability Section Styles */
+.mobile-adaptability {
+    background-color: #1e2130;
+}
+
+.app-section, .mobile-version {
+    margin-bottom: 30px;
+}
+
+/* Payment Methods Section Styles */
+.payment-methods {
+    background-color: #1e2130;
+}
+
+.payment-options {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.payment-option {
+    text-align: center;
+}
+
+.payment-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+/* Technical Support Section Styles */
+.technical-support {
+    background-color: #1e2130;
+}
+
+/* Conclusion Section Styles */
+.conclusion {
+    background-color: #1e2130;
+}
+
+/* FAQ Section Styles */
+.faq {
+    background-color: #1e2130;
+}
+
+.faq-item {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #2d3142;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-item h3 {
+    color: #a0a0a0;
+    margin-bottom: 10px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #1e2130;
+    padding: 30px;
+    text-align: center;
+    border-top: 1px solid #2d3142;
+}
+
+.copyright {
+    font-size: 14px;
+    color: #a0a0a0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero {
+        height: 400px;
+    }
+    
+    .hero h1 {
+        font-size: 32px;
+    }
+    
+    .hero h2 {
+        font-size: 24px;
+    }
+    
+    .bonus-amount {
+        font-size: 80px;
+    }
+    
+    .game-grid {
+        flex-direction: column;
+    }
+    
+    .advantages-disadvantages-tables {
+        flex-direction: column;
+    }
+    
+    .payment-options {
+        flex-direction: column;
+        align-items: center;
+    }
+}

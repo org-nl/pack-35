@@ -1,0 +1,3 @@
+img/sprite/icons-sprite.svg#close
+img/sprite/icons-sprite.svg#download
+img/sprite/icons-sprite.svg#menu
