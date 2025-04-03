@@ -30,7 +30,7 @@ ul {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1343px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -58,6 +58,10 @@ ul {
 
 .logo img {
   height: 35px;
+}
+
+.logo-footer{
+  margin-bottom: 15px;
 }
 
 .main-nav{
@@ -166,9 +170,27 @@ ul {
   border-radius: 5px;
   font-weight: bold;
   transition: background-color 0.3s;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .register-btn:hover {
+  background-color: #5d9043;
+}
+
+.register-cta {
+  display: block;
+  width: fit-content;
+  background-color: var(--primary-color);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.register-cta:hover {
   background-color: #5d9043;
 }
 
@@ -216,6 +238,13 @@ ul {
   margin-top: 20px;
 }
 
+.content-section{
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+}
+
 .content-section blockquote {
   font-style: italic;
   border-left: 4px solid var(--primary-color); /* Синяя полоса слева */
@@ -256,22 +285,6 @@ ul {
 
 .content-section p {
   margin-bottom: 15px;
-}
-
-.register-cta {
-  display: block;
-  width: fit-content;
-  background-color: var(--primary-color);
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-weight: bold;
-  margin: 20px 0;
-  text-align: center;
-}
-
-.register-cta:hover {
-  background-color: #5d9043;
 }
 
 .soccabet-img {
