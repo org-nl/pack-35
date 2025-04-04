@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     burgerBtn.addEventListener('click', () => {
       burgerBtn.classList.toggle('burger-active');
       mobileNav.classList.toggle('active');
-	  bgOverlay.classList.toggle('active');
+      bgOverlay.classList.toggle('active');
 
       // Toggle body scroll when menu is open
       if (mobileNav.classList.contains('active')) {
@@ -19,9 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-	bgOverlay.addEventListener('click', () => {
-		removeMenu();
-	});
+    bgOverlay.addEventListener('click', () => {
+      removeMenu();
+    });
 
     // Close mobile nav when clicking on a link
     for (const link of mobileNavLinks) {
@@ -37,12 +37,12 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-	function removeMenu() {
-		burgerBtn.classList.remove('burger-active');
-        mobileNav.classList.remove('active');
-		bgOverlay.classList.remove('active');
-        document.body.style.overflow = '';
-	}
+    function removeMenu() {
+      burgerBtn.classList.remove('burger-active');
+          mobileNav.classList.remove('active');
+      bgOverlay.classList.remove('active');
+          document.body.style.overflow = '';
+    }
   }
 });
 
