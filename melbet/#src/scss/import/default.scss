@@ -6,7 +6,8 @@
 }
 
 :root{
-  --brand-color: #ddb42b;
+  --brand-color: #FFE60F;
+  --brand-color-2: #10A310;
 }
 
 body {
@@ -511,7 +512,7 @@ ul, ol {
 }
 
 .royal-monday h4, .casino-bonus h4 {
-  color: #222;
+  color: var(--brand-color-2);
   font-size: 20px;
   margin-bottom: 15px;
 }
@@ -910,7 +911,7 @@ ul, ol {
 }
 
 .faq-item h3 {
-  color: var(--brand-color);
+  color: var(--brand-color-2);
   font-size: 18px;
   margin-bottom: 15px;
 }
