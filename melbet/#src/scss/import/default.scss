@@ -31,6 +31,12 @@ ul, ol {
   padding-left: 20px;
 }
 
+.md4-w100{
+  @media (max-width:#{$md4}px) {
+    width: 100%;
+  }
+}
+
 /* Container */
 .container {
   width: 100%;
