@@ -10,49 +10,15 @@
     body{background-color: #1F1F1F;}
 	div.wrap{padding: 32px; width: 100%; display: flex; justify-content: center; align-items: center;}
 	ul{list-style: none;}
-	li{margin-bottom: 12px;color: #fff;}
+	li{margin-bottom: 12px;color: #fff;display: flex;align-items: center;gap:8px;}
 	a{text-decoration: none; font-size: 20px; color: #ccc;}
-	a.green{color: #188038;}
-	a.red{color: #E81F76;}
-	a.blue{color: #3372FF;}
-	a:hover{text-decoration: underline;}
-
-	.templateText {
-		display: flex; 
-		flex-direction: column;
+	li.done a{
+		color: #34A853;
+		fill: #34A853;
+		display: flex;
 	}
-
-	.switch input {
-		position: absolute;
-		opacity: 0;
-	}
-
-	.switch {
-		display: inline-block;
-		font-size: 20px; /* 1 */
-		height: 1em;
-		width: 2em;
-		background: #BDB9A6;
-		border-radius: 1em;
-	}
-
-	.switch div {
-		height: 1em;
-		width: 1em;
-		border-radius: 1em;
-		background: #FFF;
-		box-shadow: 0 0.1em 0.3em rgba(0,0,0,0.3);
-		-webkit-transition: all 300ms;
-			-moz-transition: all 300ms;
-				transition: all 300ms;
-	}
-
-	.switch input:checked + div {
-		background-color: yellowgreen;
-		-webkit-transform: translate3d(100%, 0, 0);
-			-moz-transform: translate3d(100%, 0, 0);
-				transform: translate3d(100%, 0, 0);
-	}
+	a:hover{text-decoration: underline; color: #97E12B !important;}
+	a:hover > svg {fill: #97E12B;}
 </style>
 <body>
 	<div class="wrap">
@@ -62,9 +28,35 @@
 			<li><a href="babu88/docs/index.html">babu88</a></li>
 			<li><a href="soccabet/docs/index.html">soccabet</a></li>
 			<li><a href="m-sport/docs/index.html">m-sport</a></li>
-			<li><a href="melbet/docs/index.html">melbet</a></li>
-			<li><a href="00-ARCHIVES/melbet.zip" download>Скачать архивs</a></li>
+			<li><a href="m-sport/docs/index.html">melbet</a></li>
 		</ul>
 	</div>
+	<script>
+		// let projects = [
+		// 	["gamemania", true],
+		// 	["babu88", true],
+		// 	["soccabet", false],
+		// 	["m-sport", true],
+		// 	["melbet", true],
+		// ];
+
+		// let el = document.querySelector('.wrap ul');
+		// document.addEventListener('DOMContentLoaded', function(){
+		// 	projects.forEach(function (item) {
+		// 		el.insertAdjacentHTML('beforeend', item[1] ? 
+		// 			`<li class="done">
+		// 				<a href="00-ARCHIVES/${item[0]}.zip" download>
+		// 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+		// 					  <path d="M5 21a2 2 0 0 1-2-2v-4h2v4h14v-4h2v4a2 2 0 0 1-2 2H5z"/>
+		// 					  <path d="M12 15l5-5h-3V3h-4v7H7l5 5z"/>
+		// 					</svg>
+		// 				</a>
+		// 				<a href="${item[0]}/docs/index.html">${item[0]}</a>
+		// 			</li>` :
+		// 			`<li><a href="${item[0]}/docs/index.html">${item[0]}</a></li>`
+		// 		)
+		// 	});
+		// })
+	</script>
 </body>
 </html>
