@@ -330,11 +330,6 @@ section::before {
   z-index: -1;
 }
 
-/* Subtle borders between sections like the original */
-section:not(.hero,.marquee-section) {
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-
 /* Special styling for hero section */
 .hero::before {
   display: none;
@@ -609,22 +604,6 @@ section:nth-child(even)::before {
   margin-bottom: 20px;
 }
 
-.social-links {
-  margin-top: 20px;
-}
-
-.social-links a {
-  display: inline-block;
-  margin: 0 10px;
-  font-size: 24px;
-  color: var(--color-accent);
-  transition: transform 0.3s;
-}
-
-.social-links a:hover {
-  transform: scale(1.2);
-}
-
 /* Footer Styles */
 footer {
   background-color: #202020;
@@ -690,28 +669,25 @@ footer {
 }
 
 .social-links {
-  margin-top: 20px;
   display: flex;
+  gap: 15px;
 }
 
-.social-links a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 15px;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  background-color: var(--color-border);
-  color: var(--color-accent);
-  font-size: 18px;
-  transition: all 0.3s;
+.social-links a{
+  padding: 8px;
+  border-radius: 99px;
+  background-color: var(--color-bg);
 }
 
-.social-links a:hover {
-  transform: scale(1.1);
-  background-color: var(--color-accent);
-  color: var(--color-primary);
+.social-links a:hover{
+  background-color: var(--color-bg-island);
+}
+
+.w-24{
+  flex: 0 0 24px;
+  height: 24px;
+  width: 24px;
+  display: block;
 }
 
 .footer-categories h3,
@@ -850,17 +826,13 @@ footer {
       flex: 0 0 100%;
   }
 
-  .social-links {
-      justify-content: center;
-  }
-
   .footer-logo {
       text-align: center;
   }
 
   .footer-description,
   .footer-website {
-      text-align: center;
+      text-align: left;
   }
 }
 
