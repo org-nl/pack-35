@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const burgerBtn = document.querySelector('.js-burger-menu');
   const mobileNav = document.querySelector('.js-main-nav');
   const bgOverlay = document.querySelector('.js-bgOverlay');
-  const mobileNavLinks = document.querySelectorAll('.mobile-nav-list li a');
 
   if (burgerBtn && mobileNav) {
     burgerBtn.addEventListener('click', () => {
@@ -22,13 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
     bgOverlay.addEventListener('click', () => {
       removeMenu();
     });
-
-    // Close mobile nav when clicking on a link
-    for (const link of mobileNavLinks) {
-      link.addEventListener('click', () => {
-        removeMenu();
-      });
-    }
 
     // Close mobile nav when window is resized to desktop size
     window.addEventListener('resize', () => {

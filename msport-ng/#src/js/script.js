@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	document.querySelector('#currentYear').textContent = currentYear;
 
     // Get all FAQ items
-    const faqItems = document.querySelectorAll('.faq-item h3');
+    const faqItems = document.querySelectorAll('.faq-question');
 
     // Add click event listener to each FAQ item
     faqItems.forEach(item => {
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Mobile Menu Functionality
     const burgerMenu = document.querySelector('.burger-menu');
-    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileMenu = document.querySelector('.bottom-header');
     const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
 
     if (burgerMenu && mobileMenu && mobileMenuOverlay) {
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Floating image functionality
-    const floatingLink = document.querySelector('.floating-link');
+    const floatingLink = document.querySelector('.floating-link-icon');
     if (floatingLink) {
         floatingLink.addEventListener('click', function(e) {
             e.preventDefault();
