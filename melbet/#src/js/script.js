@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	element.innerHTML = year;
 
 	// Lazy load YouTube video
-    const youtubeContainer = document.querySelector('.youtube-container');
+    const youtubeContainer = document.querySelector('.youtube-boxContent');
     if (youtubeContainer) {
         const placeholder = youtubeContainer.querySelector('.youtube-placeholder');
         const videoId = youtubeContainer.getAttribute('data-video-id');

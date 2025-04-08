@@ -31,31 +31,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function removeMenu() {
       burgerBtn.classList.remove('burger-active');
-          mobileNav.classList.remove('active');
+      mobileNav.classList.remove('active');
       bgOverlay.classList.remove('active');
-          document.body.style.overflow = '';
+      document.body.style.overflow = '';
     }
   }
 });
 
 // FAQ Accordion functionality
 document.addEventListener('DOMContentLoaded', () => {
-  const faqItems = document.querySelectorAll('.faq-item');
+  const faqItems = document.querySelectorAll('.helpCenter');
 
   for (const item of faqItems) {
-    const question = item.querySelector('.faq-question');
+    const question = item.querySelector('.helpCenter__header');
 
     if (question) {
       question.addEventListener('click', () => {
         // Close all other FAQ items
         for (const otherItem of faqItems) {
-          if (otherItem !== item && otherItem.classList.contains('faq-active')) {
-            otherItem.classList.remove('faq-active');
+          if (otherItem !== item && otherItem.classList.contains('helpCenter__isActive')) {
+            otherItem.classList.remove('helpCenter__isActive');
           }
         }
 
         // Toggle the clicked FAQ item
-        item.classList.toggle('faq-active');
+        item.classList.toggle('helpCenter__isActive');
       });
     }
   }

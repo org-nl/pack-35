@@ -38,8 +38,8 @@ ul, ol {
   }
 }
 
-/* Container */
-.container {
+/* boxContent */
+.boxContent {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -55,7 +55,7 @@ ul, ol {
   z-index: 1000;
 }
 
-.nav {
+.navigation {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -77,23 +77,23 @@ ul, ol {
   width: auto;
 }
 
-.nav-menu {
+.navigationMenu {
   display: flex;
   list-style: none;
   padding: 0;
 }
 
-.nav-menu li {
+.navigationMenu li {
   margin-left: 20px;
 }
 
-.nav-link {
+.navigationItem {
   color: #fff;
   font-size: 16px;
   transition: color 0.3s ease;
 }
 
-.nav-link:hover {
+.navigationItem:hover {
   color: var(--brand-color);
 }
 
@@ -111,8 +111,7 @@ ul, ol {
   color: #222;
 }
 
-/* Hero Section */
-.hero {
+.welcome {
   background-image: url('../img/stadium-background.jpg');
   background-size: cover;
   background-position: center;
@@ -122,7 +121,7 @@ ul, ol {
   overflow: hidden;
 }
 
-.hero::before {
+.welcome::before {
   content: '';
   position: absolute;
   top: 0;
@@ -133,7 +132,7 @@ ul, ol {
   z-index: 1;
 }
 
-.hero .container {
+.welcome .boxContent {
   position: relative;
   z-index: 2;
   display: flex;
@@ -141,25 +140,25 @@ ul, ol {
   justify-content: space-between;
 }
 
-.hero-content {
+.welcome-content {
   flex: 1;
   max-width: 50%;
   text-align: left;
 }
 
-.hero-image {
+.welcome-image {
   flex: 1;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
 }
 
-.hero-image img {
+.welcome-image img {
   max-width: 450px;
   height: auto;
 }
 
-.hero h2 {
+.welcome h2 {
   font-size: 18px;
   font-weight: 500;
   text-transform: uppercase;
@@ -167,7 +166,7 @@ ul, ol {
   color: #fff;
 }
 
-.hero h1 {
+.welcome h1 {
   font-size: 42px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -175,7 +174,7 @@ ul, ol {
   text-transform: uppercase;
 }
 
-.hero p {
+.welcome p {
   font-size: 16px;
   margin-bottom: 10px;
   color: #fff;
@@ -267,7 +266,7 @@ ul, ol {
   margin-top: 20px;
 }
 
-.youtube-container {
+.youtube-boxContent {
   width: 100%;
   position: relative;
   padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
@@ -329,7 +328,7 @@ ul, ol {
   transform: translate(-50%, -50%) scale(1.1);
 }
 
-.youtube-container iframe {
+.youtube-boxContent iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -885,38 +884,38 @@ ul, ol {
 }
 
 /* FAQ Section */
-.faq-section {
+.help-section {
   padding: 50px 0;
   background-color: #fff;
 }
 
-.faq-section h2 {
+.help-section h2 {
   color: #333;
   font-size: 28px;
   margin-bottom: 30px;
   text-align: center;
 }
 
-.faq-items {
+.help-items {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 }
 
-.faq-item {
+.help-item {
   background-color: #f8f8f8;
   border-radius: 8px;
   padding: 25px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
-.faq-item h3 {
+.help-item h3 {
   color: var(--brand-color-2);
   font-size: 18px;
   margin-bottom: 15px;
 }
 
-.faq-item p {
+.help-item p {
   line-height: 1.7;
 }
 
@@ -1031,21 +1030,21 @@ ul, ol {
 
 /* Responsive Design */
 @media (max-width: 992px) {
-  .hero .container {
+  .welcome .boxContent {
       flex-direction: column;
   }
 
-  .hero-content {
+  .welcome-content {
       max-width: 100%;
       text-align: center;
       margin-bottom: 30px;
   }
 
-  .hero-image {
+  .welcome-image {
       justify-content: center;
   }
 
-  .hero-image img {
+  .welcome-image img {
       max-width: 350px;
   }
 
@@ -1078,7 +1077,7 @@ ul, ol {
 }
 
 @media (max-width: 768px) {
-  .nav {
+  .navigation {
       flex-wrap: wrap;
   }
 
@@ -1086,7 +1085,7 @@ ul, ol {
       flex: 0 0 auto;
   }
 
-  .nav-menu {
+  .navigationMenu {
       flex-basis: 100%;
       order: 3;
       margin-top: 15px;
@@ -1094,23 +1093,23 @@ ul, ol {
       margin-left: 0;
   }
 
-  .nav-menu li {
+  .navigationMenu li {
       margin: 0 10px;
   }
 
-  .hero h1 {
+  .welcome h1 {
       font-size: 32px;
   }
 
-  .hero h2 {
+  .welcome h2 {
       font-size: 16px;
   }
 
-  .hero p {
+  .welcome p {
       font-size: 14px;
   }
 
-  .hero-image img {
+  .welcome-image img {
       max-width: 280px;
   }
 
@@ -1130,22 +1129,22 @@ ul, ol {
   .bonus-info,
   .registration-methods,
   .payment-methods,
-  .faq-items,
+  .help-items,
   .overview-content {
       grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 480px) {
-  .hero h1 {
+  .welcome h1 {
       font-size: 28px;
   }
 
-  .hero h2 {
+  .welcome h2 {
       font-size: 14px;
   }
 
-  .hero-image img {
+  .welcome-image img {
       max-width: 220px;
   }
 

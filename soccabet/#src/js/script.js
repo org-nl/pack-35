@@ -1,7 +1,7 @@
 // /* Управление меню */
 (function() {
-	const burgerBtn = document.querySelector('.js-burger-btn');
-	const burgerMenu = document.querySelector('.js-burger-menu');
+	const burgerBtn = document.querySelector('.js-menu-btn');
+	const burgerMenu = document.querySelector('.js-mobile-menu');
 	const bgOverlay = document.querySelector('.js-bgOverlay');
 
 	if (burgerBtn && burgerMenu && bgOverlay) {

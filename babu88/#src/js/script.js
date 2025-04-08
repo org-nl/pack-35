@@ -67,15 +67,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 	// FAQ accordion functionality
-    const faqItems = document.querySelectorAll('.faq-item');
+    const faqItems = document.querySelectorAll('.support__item');
 
     if (faqItems.length > 0) {
         faqItems.forEach(item => {
-            const question = item.querySelector('.faq-question');
+            const question = item.querySelector('.support__question');
 
             question.addEventListener('click', () => {
                 // Close all other items
-                const currentlyActive = document.querySelector('.faq-item.active');
+                const currentlyActive = document.querySelector('.support__item.active');
                 if (currentlyActive && currentlyActive !== item) {
                     currentlyActive.classList.remove('active');
                 }
