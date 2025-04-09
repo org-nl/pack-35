@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	document.querySelector('#currentYear').textContent = currentYear;
 
     // Get all FAQ items
-    const faqItems = document.querySelectorAll('.faq-question');
+    const faqItems = document.querySelectorAll('.helpInfo_title');
 
     // Add click event listener to each FAQ item
     faqItems.forEach(item => {
@@ -26,21 +26,21 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Initially hide all FAQ answers
-    document.querySelectorAll('.faq-answer').forEach(answer => {
+    document.querySelectorAll('.helpInfo_answer').forEach(answer => {
         answer.style.maxHeight = null;
     });
 
     // Back to top button functionality
-    const backToTopBtn = document.querySelector('.back-to-top');
-    if (backToTopBtn) {
-        backToTopBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    }
+    // const backToTopBtn = document.querySelector('.back-to-top');
+    // if (backToTopBtn) {
+    //     backToTopBtn.addEventListener('click', function(e) {
+    //         e.preventDefault();
+    //         window.scrollTo({
+    //             top: 0,
+    //             behavior: 'smooth'
+    //         });
+    //     });
+    // }
 
     // Mobile Menu Functionality
     const burgerMenu = document.querySelector('.burger-menu');
