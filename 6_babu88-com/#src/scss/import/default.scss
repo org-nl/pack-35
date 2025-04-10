@@ -349,9 +349,7 @@ p {
 
 section a:not([class]){
   color: blue;
-  &:hover{
-    text-decoration: underline;
-  }
+  text-decoration: underline;
 }
 
 .btnMaxinnerContent{
