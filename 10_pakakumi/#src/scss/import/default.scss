@@ -63,8 +63,7 @@ main > section:nth-child(even) {
 .site-header {
   background-color: var(--dark-bg);
   padding: 15px 0;
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 100;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -216,6 +215,7 @@ main > section:nth-child(even) {
 
 .btn-primary:hover {
   background-color: #ff5500;
+  color: white;
   transform: translateY(-2px);
 }
 
