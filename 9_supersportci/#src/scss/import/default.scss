@@ -7,9 +7,9 @@
 
 /* Variables */
 :root {
-  --primary-color: #fcc100;
-  --secondary-color: #1a674b;
-  --dark-color: #0c102c;
+  --primary-color: #E7B62B;
+  --secondary-color: #0E891E;
+  --dark-color: #182243;
   --light-color: #ffffff;
   --gray-color: #f4f4f4;
   --text-color: #333333;
@@ -50,6 +50,10 @@ img {
   }
 }
 
+.accent-color{
+  color: var(--secondary-color);
+}
+
 /* Header styles */
 .header {
   background-color: var(--dark-color);
@@ -64,7 +68,7 @@ img {
 }
 
 .logo img {
-  height: 50px;
+  height: auto;
 }
 
 .nav {
@@ -167,6 +171,9 @@ img {
   align-items: center;
   justify-content: center;
   color: var(--dark-color);
+  svg{
+    transform: translateX(1px);
+  }
 }
 
 /* Alternatives section */
@@ -254,7 +261,8 @@ img {
   border-bottom-right-radius: 8px;
   font-weight: 700;
   &_active{
-    background-color: #4DB740;
+    background-color: var(--secondary-color);
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, .8);
   }
 }
 
@@ -272,7 +280,7 @@ img {
 }
 
 .alternatives-table-rate span {
-  color: #FCBD2E;
+  color: var(--secondary-color);
 }
 
 .alternatives-table-advantages {
@@ -367,12 +375,11 @@ img {
   margin: 20px 0;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.update-box p:first-child {
-  color: #fe2200;
-  margin-bottom: 10px;
-  font-weight: 700;
+  &__label{
+    color: #aa1b05;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
 }
 
 .download-buttons {
