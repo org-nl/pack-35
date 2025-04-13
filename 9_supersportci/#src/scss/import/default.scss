@@ -23,7 +23,7 @@ body {
   font-size: 16px;
 }
 
-.container {
+.layoutArea {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
@@ -61,7 +61,7 @@ img {
   position: relative;
 }
 
-.header-container {
+.header-layoutArea {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -71,18 +71,18 @@ img {
   height: auto;
 }
 
-.nav {
+.mainMenu {
   display: flex;
 }
 
-.nav-item {
+.mainMenu-item {
   margin-left: 30px;
   color: var(--light-color);
   font-weight: 500;
   transition: color 0.3s;
 }
 
-.nav-item:hover {
+.mainMenu-item:hover {
   color: var(--primary-color);
 }
 
@@ -99,41 +99,41 @@ img {
   opacity: 0.9;
 }
 
-/* Hero section */
-.hero {
+/* welcomeBanner section */
+.welcomeBanner {
   background: var(--dark-color) url('../img/background.webp') no-repeat center center/cover;
   color: var(--light-color);
   padding: 60px 0;
 }
 
-.hero-content {
+.welcomeBanner-content {
   max-width: 600px;
   margin-bottom: 50px;
 }
 
-.hero-title {
+.welcomeBanner-title {
   font-size: 42px;
   margin-bottom: 20px;
   line-height: 1.2;
 }
 
-.hero-desc {
+.welcomeBanner-desc {
   font-size: 18px;
   margin-bottom: 30px;
 }
 
-.hero-desc strong {
+.welcomeBanner-desc strong {
   color: var(--primary-color);
 }
 
-.hero-links {
+.welcomeBanner-links {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
 }
 
-.hero-link {
+.welcomeBanner-link {
   background-color: var(--light-color);
   display: flex;
   align-items: center;
@@ -144,24 +144,24 @@ img {
   width: 100%;
 }
 
-.hero-link:hover {
+.welcomeBanner-link:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
 }
 
-.hero-link-icon {
+.welcomeBanner-link-icon {
   color: var(--primary-color);
   font-size: 30px;
   margin-right: 15px;
 }
 
-.hero-link-text {
+.welcomeBanner-link-text {
   font-weight: 700;
   font-size: 18px;
   color: var(--text-color);
 }
 
-.hero-link-arrow {
+.welcomeBanner-link-arrow {
   margin-left: auto;
   background-color: var(--primary-color);
   border-radius: 50%;
@@ -566,7 +566,7 @@ img {
   width: 40%;
 }
 
-.cta-button {
+.primatyBtn {
   display: inline-block;
   background-color: var(--primary-color);
   color: var(--dark-color);
@@ -581,27 +581,27 @@ img {
   }
 }
 
-.cta-button:hover {
+.primatyBtn:hover {
   background-color: #e0b000;
 }
 
-.cta-button-container {
+.primatyBtn-layoutArea {
   text-align: center;
 }
 
-/* FAQ section */
-.faq {
+/* qaBlock section */
+.qaBlock {
   padding: 50px 0;
   background-color: var(--gray-color);
 }
 
-.faq-title {
+.qaBlock-title {
   font-size: 32px;
   margin-bottom: 30px;
   text-align: center;
 }
 
-.faq-item {
+.qaBlock-item {
   background-color: white;
   border-radius: 8px;
   margin-bottom: 15px;
@@ -609,7 +609,7 @@ img {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.faq-question {
+.qaBlock-question {
   padding: 20px 35px 20px 20px;
   background-color: #f7f7f7;
   font-weight: 700;
@@ -619,7 +619,7 @@ img {
   font-size: 18px;
 }
 
-.faq-question::after {
+.qaBlock-question::after {
   content: "+";
   position: absolute;
   right: 20px;
@@ -629,23 +629,23 @@ img {
   color: var(--primary-color);
 }
 
-.faq-item.active .faq-question {
+.qaBlock-item.active .qaBlock-question {
   background-color: var(--primary-color);
 }
 
-.faq-item.active .faq-question::after {
+.qaBlock-item.active .qaBlock-question::after {
   content: "−";
   color: white;
 }
 
-.faq-answer {
+.qaBlock-answer {
   padding: 0 20px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.15s ease-out, padding 0.15s ease-out;
 }
 
-.faq-item.active .faq-answer {
+.qaBlock-item.active .qaBlock-answer {
   padding: 20px;
   max-height: none;
 }
@@ -731,25 +731,25 @@ img {
 
 /* Mobile styles */
 @media (max-width: 768px) {
-  .header-container {
+  .header-layoutArea {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
 
-  .nav {
+  .mainMenu {
     margin: 20px 0;
   }
 
-  .nav-item {
+  .mainMenu-item {
     margin: 0 10px;
   }
 
-  .hero-title {
+  .welcomeBanner-title {
     font-size: 32px;
   }
 
-  .hero-links {
+  .welcomeBanner-links {
     flex-direction: column;
     align-items: center;
   }
@@ -779,24 +779,28 @@ img {
 }
 
 @media (max-width: 480px) {
-  .hero-title {
+  .welcomeBanner-title {
     font-size: 28px;
   }
 
-  .hero-desc {
+  .welcomeBanner-desc {
     font-size: 16px;
   }
 
-  .alternatives-title, .overview-title, .download-title, .faq-title {
+  .alternatives-title, .overview-title, .download-title, .qaBlock-title {
     font-size: 24px;
   }
 
-  .nav {
-    flex-direction: column;
+  .mainMenu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
     width: 100%;
+    margin: 10px 0;
   }
 
-  .nav-item {
+  .mainMenu-item {
     margin: 10px 0;
   }
 

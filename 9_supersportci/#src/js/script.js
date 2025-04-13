@@ -1,19 +1,19 @@
-// Toggle FAQ items
+// Toggle qaBlock items
 document.addEventListener('DOMContentLoaded', function() {
-	// Add click event listeners to all FAQ questions
-	const faqQuestions = document.querySelectorAll('.faq-question');
-	faqQuestions.forEach(question => {
+	// Add click event listeners to all qaBlock questions
+	const qaBlockQuestions = document.querySelectorAll('.qaBlock-question');
+	qaBlockQuestions.forEach(question => {
 	  question.addEventListener('click', function() {
 		// Toggle active class on the parent item
-		const faqItem = this.parentElement;
-		if (faqItem.classList.contains('active')) {
-		  faqItem.classList.remove('active');
+		const qaBlockItem = this.parentElement;
+		if (qaBlockItem.classList.contains('active')) {
+		  qaBlockItem.classList.remove('active');
 		} else {
-		  // Optional: Close other open FAQ items
-		  document.querySelectorAll('.faq-item').forEach(item => {
+		  // Optional: Close other open qaBlock items
+		  document.querySelectorAll('.qaBlock-item').forEach(item => {
 			item.classList.remove('active');
 		  });
-		  faqItem.classList.add('active');
+		  qaBlockItem.classList.add('active');
 		}
 	  });
 	});
