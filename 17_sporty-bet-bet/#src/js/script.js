@@ -105,12 +105,4 @@ document.addEventListener('DOMContentLoaded', function() {
     bannerBtn.addEventListener('click', function () {
         this.closest('.banner').classList.add('hide');
     })
-
-    const swiper = new Swiper('.swiper', {
-        loop: true, // Бесконечная прокрутка
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-      });
 });
