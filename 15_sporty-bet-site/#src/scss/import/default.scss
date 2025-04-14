@@ -82,6 +82,7 @@ ul, ol {
   float: left;
   margin-right: 20px;
   width: 49.65%;
+  height: auto;
   @media (max-width:#{$md3}px) {
     float: none;
     margin-right: 0;
@@ -93,6 +94,7 @@ ul, ol {
   float: right;
   margin-left: 20px;
   width: 49.65%;
+  height: auto;
   @media (max-width:#{$md3}px) {
     float: none;
     margin-left: 0;
@@ -104,6 +106,7 @@ ul, ol {
   display: block;
   margin: 0 auto;
   max-width: 100%;
+  height: auto;
 }
 
 .button{
