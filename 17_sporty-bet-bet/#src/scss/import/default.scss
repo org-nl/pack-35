@@ -25,7 +25,11 @@ a {
 }
 
 section a:not([class]){
-  text-decoration: underline;
+  color: blue;
+  text-decoration: none;
+  &:hover{
+    text-decoration: underline;
+  }
 }
 
 ul, ol {
