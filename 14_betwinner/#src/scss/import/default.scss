@@ -95,6 +95,7 @@ main > section {
 
 .btn-primary {
   background-color: var(--primary-color);
+  text-shadow: 1px 3px 3px rgba(20, 0, 0, .8);
   color: var(--white);
   border: 2px solid var(--primary-color);
 }
@@ -646,7 +647,7 @@ strong {
 }
 
 .footer__copyright {
-  color: var(--gray);
+  color: #B1B9B7;
   font-size: 14px;
 }
 
