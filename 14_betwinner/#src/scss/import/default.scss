@@ -1,21 +1,29 @@
-/* Reset CSS */
+/* Global Styles */
+:root {
+  --primary-color: #11b073;
+  --primary-dark: #1a503a;
+  --primary-light: #26c184;
+  --secondary-color: #FFCD05;
+  --text-color: #333;
+  --text-light: #777;
+  --white: #fafbfa;
+  --gray-light: #c9d2d0;
+  --gray: #97a19d;
+  --black: #000;
+  --table-bg: #f5f5f5;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-:root{
-  --brand-color: #FFE60F;
-  --brand-color-2: #10A310;
-}
-
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica", "Arial", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Fira Sans", "Droid Sans", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
-  color: #333;
-  background-color: #f5f5f5;
-  position: relative;
+  color: var(--text-color);
+  background-color: var(--white);
 }
 
 a {
@@ -23,11 +31,648 @@ a {
   color: inherit;
 }
 
-section a:not([class]){
-  text-decoration: underline;
-}
-
 ul, ol {
   list-style-position: inside;
-  padding-left: 20px;
+}
+
+.content-box {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+h1, h2, h3 {
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+main > section {
+  @media (max-width:#{$md3}px) {
+    padding: 26px 0 !important;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Button Icons */
+.icon {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  margin-right: -8px;
+}
+
+.icon-arrow-right::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='%23fff'%3E%3Cpath d='M9.29 6.71a1 1 0 0 0 0 1.41L13.17 12l-3.88 3.88a1 1 0 1 0 1.41 1.41l4.59-4.59a1 1 0 0 0 0-1.41L10.7 6.7a1 1 0 0 0-1.41 0z' fill='%23fff'/%3E%3C/svg%3E%0A") no-repeat center/contain;
+}
+
+.icon-link::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='%23000'%3E%3Cpath d='M10.59 13.41a1 1 0 0 1 0-1.41l4.59-4.59H13a1 1 0 1 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 1 1-2 0V9.41l-4.59 4.59a1 1 0 0 1-1.41 0zM16 13a1 1 0 0 1 1 1v4a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h4a1 1 0 1 1 0 2H7v8h8v-4a1 1 0 0 1 1-1z' fill='%23000'/%3E%3C/svg%3E ") no-repeat center/contain;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: 2px solid var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: var(--black);
+  border: 2px solid var(--secondary-color);
+}
+
+.btn-secondary:hover {
+  background-color: #c9a81e;
+  border-color: #c9a81e;
+}
+
+.section-title {
+  color: var(--primary-dark);
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  @media (max-width:#{$md3}px) {
+    margin-top: 24px;
+    margin-bottom: 16pz;
+  }
+}
+
+.subsection-title {
+  color: var(--primary-dark);
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  @media (max-width:#{$md3}px) {
+    margin-top: 20px;
+    margin-bottom: 12px;
+  }
+}
+
+.section-description, .subsection-description {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.section-conclusion, .subsection-conclusion, .instruction-conclusion, .tips-conclusion, .steps-conclusion {
+  margin: 20px 0;
+  font-style: italic;
+}
+
+.btnAction {
+  margin: 30px 0;
+  text-align: center;
+}
+
+strong {
+  font-weight: bold;
+  color: var(--primary-dark);
+}
+
+/* Header Styles */
+.header {
+  background-color: var(--primary-dark);
+  color: var(--white);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header__content-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.header__login{
+  @media (max-width:#{$md3}px) {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.header__login > a {
+  white-space: nowrap;
+}
+
+.header__logo{
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.header__logo img {
+  height: 19px;
+  width: auto;
+  max-width: 100%;
+}
+
+/* Burger Menu */
+.menuToggler {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 101;
+  flex: 0 0 30px;
+}
+
+.menuToggler span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.menuToggler.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.menuToggler.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menuToggler.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+.header__nav {
+  display: flex;
+}
+
+.header__menu {
+  display: flex;
+  list-style: none;
+}
+
+.header__menu > li:not(:last-child) {
+  position: relative;
+  margin-right: 20px;
+}
+
+.header__menu > li > a {
+  padding: 10px 0;
+  display: block;
+  font-weight: bold;
+}
+
+.header__menu > li > a:hover {
+  color: var(--secondary-color);
+}
+
+.login-btn {
+  display: inline-block;  
+  background-color: var(--secondary-color);
+  color: var(--black);
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #c9a81e;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .menuToggler {
+    display: flex;
+  }
+
+  .header__nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: var(--primary-dark);
+    padding: 80px 20px 20px;
+    transition: all 0.3s ease;
+    z-index: 100;
+  }
+
+  .header__nav.active {
+    right: 0;
+  }
+
+  .header__menu {
+    flex-direction: column;
+  }
+
+  .header__menu > li {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .startView {
+    padding: 40px 0;
+  }
+
+  .startView__title {
+    font-size: 28px;
+  }
+
+  .startView__description {
+    font-size: 16px;
+  }
+
+  .steps-list {
+    columns: 1;
+  }
+
+  .table-header, .table-row {
+    flex-direction: column;
+  }
+
+  .table-header div, .table-row div {
+    width: 100%;
+  }
+}
+
+/* startView Section */
+.startView {
+  background-image: linear-gradient(rgba(26, 80, 58, 0.8), rgba(26, 80, 58, 0.8)), url('../img/background.webp');
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
+  padding: 80px 0;
+}
+
+.startView__content {
+  max-width: 800px;
+}
+
+.startView__title {
+  font-size: 36px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.startView__description {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.startView__buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  @media (max-width:#{$md4}px) {
+    flex-direction: column;
+  }
+}
+
+.startView__buttons .btn {
+  min-width: 120px;
+}
+
+/* Why BetWinner Section */
+.why-betwinner {
+  padding: 60px 0;
+}
+
+/* Advantages Table */
+.advantages {
+  padding: 40px 0;
+  background-color: #f5f5f5;
+}
+
+.advantages-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.table-header {
+  display: flex;
+  background-color: var(--primary-dark);
+  color: var(--white);
+  font-weight: bold;
+}
+
+.table-header div {
+  padding: 15px;
+  flex: 1;
+}
+
+.table-row {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+}
+
+.table-row:nth-child(even) {
+  background-color: var(--table-bg);
+}
+
+.table-row div {
+  padding: 15px;
+  flex: 1;
+}
+
+.table-row div:nth-child(2) {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* Features Section */
+.features {
+  padding: 60px 0;
+}
+
+/* Download App Section */
+.download-app {
+  padding: 60px 0;
+  background-color: #f5f5f5;
+}
+
+/* Download Instructions */
+.download-instructions {
+  padding: 40px 0;
+}
+
+.numeric-list {
+  counter-reset: instruction-counter;
+  list-style-type: none;
+  margin-left: 25px;
+  @media (max-width:#{$md4}px) {
+    margin-left: 8px;
+  }
+}
+
+.numeric-list li {
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 35px;
+}
+
+.numeric-list li:before {
+  counter-increment: instruction-counter;
+  content: counter(instruction-counter);
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+}
+
+/* Navigation Tips */
+.navigation-tips {
+  padding: 40px 0;
+  background-color: #f5f5f5;
+}
+
+/* Sports Betting Section */
+.sports-betting {
+  padding: 60px 0;
+}
+
+.steps-list {
+  list-style-type: none;
+  margin-bottom: 30px;
+}
+
+.steps-list-multicolumn{
+  columns: 2;
+  column-gap: 30px;
+}
+
+.steps-list li {
+  margin-bottom: 10px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.steps-list li:before {
+  content: "•";
+  color: var(--primary-color);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Live Betting Section */
+.live-betting {
+  padding: 30px 0;
+  background-color: #f5f5f5;
+}
+
+/* Pre-Match Section */
+.pre-match {
+  padding: 30px 0;
+}
+
+/* Top Odds Section */
+.top-odds {
+  padding: 30px 0;
+  background-color: #f5f5f5;
+}
+
+/* Football Betting Section */
+.football-betting {
+  padding: 30px 0;
+}
+
+.football-markets {
+  list-style-type: none;
+  margin-bottom: 30px;
+}
+
+.football-markets li {
+  margin-bottom: 10px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.football-markets li:before {
+  content: "✓";
+  color: var(--primary-color);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* eSports Betting Section */
+.esports-betting {
+  padding: 30px 0;
+  background-color: #f5f5f5;
+}
+
+.esteps-list {
+  list-style-type: none;
+  margin-bottom: 30px;
+}
+
+.esteps-list li {
+  margin-bottom: 10px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.esteps-list li:before {
+  content: "✓";
+  color: var(--primary-color);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.section-image{
+  display: block;
+  margin: 20px auto;
+  border-radius: 5px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* First Bet Section */
+.first-bet {
+  padding: 40px 0;
+}
+
+/* Casino Section */
+.casino {
+  padding: 60px 0;
+  background-color: #f5f5f5;
+}
+
+/* Casino Games Section */
+.casino-games {
+  padding: 40px 0;
+}
+
+.games-list {
+  list-style-type: none;
+}
+
+.games-list li {
+  margin-bottom: 20px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.games-list li:before {
+  content: "♦";
+  color: var(--primary-color);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--primary-dark);
+  color: var(--white);
+  padding: 40px 0;
+  margin-top: 60px;
+}
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footer__logo img {
+  height: 40px;
+  width: auto;
+  margin-right: 20px;
+}
+
+.footer__links {
+  display: flex;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #149664;
+  @media (max-width:#{$md3}px) {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+.footer__links a {
+  margin-right: 20px;
+  color: var(--gray-light);
+}
+
+.footer__links a:hover {
+  color: var(--white);
+}
+
+.footer__copyright {
+  color: var(--gray);
+  font-size: 14px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .startView {
+    padding: 40px 0;
+  }
+
+  .startView__title {
+    font-size: 28px;
+  }
+
+  .startView__description {
+    font-size: 16px;
+  }
+
+  .steps-list-multicolumn {
+    columns: 1;
+  }
+
+  .table-header, .table-row {
+    flex-direction: column;
+  }
+
+  .table-header div, .table-row div {
+    width: 100%;
+  }
 }

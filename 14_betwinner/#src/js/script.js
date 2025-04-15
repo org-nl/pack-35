@@ -1,29 +1,37 @@
+// Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
-
-	// This script sets the current year in the footer of the page.
-	let now = new Date();
-	let year = now.getFullYear();
-	let element = document.querySelector("#current-year");
-	element.innerHTML = year;
-
-	// Lazy load YouTube video
-    const youtubeContainer = document.querySelector('.youtube-boxContent');
-    if (youtubeContainer) {
-        const placeholder = youtubeContainer.querySelector('.youtube-placeholder');
-        const videoId = youtubeContainer.getAttribute('data-video-id');
-
-        placeholder.addEventListener('click', function() {
-            const iframe = document.createElement('iframe');
-            iframe.setAttribute('src', `https://www.youtube.com/embed/${videoId}?autoplay=1`);
-            iframe.setAttribute('title', 'Melbet Ghana Introduction');
-            iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
-            iframe.setAttribute('allowfullscreen', '');
-            iframe.setAttribute('loading', 'lazy');
-
-            // Replace the placeholder with the iframe
-            youtubeContainer.innerHTML = '';
-            youtubeContainer.appendChild(iframe);
+    // Mobile menu toggle
+    const createMobileMenuButton = () => {
+      const burgerMenu = document.querySelector('.menuToggler');
+      const nav = document.querySelector('.header__nav');
+  
+      if (burgerMenu && nav) {
+        burgerMenu.addEventListener('click', function() {
+          nav.classList.toggle('active');
+          burgerMenu.classList.toggle('active');
         });
-    }
-
-});
+  
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+          if (!burgerMenu.contains(e.target) && !nav.contains(e.target) && nav.classList.contains('active')) {
+            nav.classList.remove('active');
+            burgerMenu.classList.remove('active');
+          }
+        });
+  
+        // Close mobile menu when clicking on a link
+        const navLinks = nav.querySelectorAll('a');
+        navLinks.forEach(link => {
+          link.addEventListener('click', function() {
+            nav.classList.remove('active');
+            burgerMenu.classList.remove('active');
+          });
+        });
+      }
+    };
+  
+    
+    // Initialize all functions
+    createMobileMenuButton();
+  });
+  
