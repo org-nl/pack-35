@@ -11,7 +11,7 @@
     <header class="header">
         <div class="header__desc">
             <div class="header__fon">
-                <div class="container">
+                <div class="containerBox">
                     <div class="header__soc">
                         <ul>
                             <li>
@@ -29,8 +29,15 @@
             </div>
 
             <div class="header__main">
-                <div class="container">
+                <div class="containerBox">
                     <div class="header__flex">
+                        <div class="open-menu">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                        </div>
+
                         <a href="#" class="header__logo">
                             <img src="img/jeetbuzz-india-logo.png" alt="Jeetbuzz logo">
                         </a>
@@ -44,7 +51,7 @@
             </div>
 
             <div class="header__cnt">
-                <div class="container">
+                <div class="containerBox">
                     <div class="header__menu">
                         <ul>
                             <li class="icon-home">
@@ -59,6 +66,7 @@
                                         </g>
                                     </svg>
                                 </a>
+                                <span>Home</span>
                             </li>
                             <li class="icon-phone">
                                 <a href="#">
@@ -72,85 +80,17 @@
                                         </g>
                                     </svg>
                                 </a>
+                                <span>App</span>
                             </li>
-                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Games</a></li>
                             <li><a href="#">Jeetbuzz App Download</a></li>
+                            <li><a href="#">link 3</a></li>
                         </ul>
+                        <div class="close-menu">×</div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Mobile Header -->
-        <div class="header__mobile">
-            <div class="open-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
-            <a href="#" class="header-mob__menu">
-                <img src="img/jeetbuzz-india-logo.png" alt="Jeetbuzz logo">
-            </a>
-
-            <div class="header-right-group">
-                <a class="app-download" href="#">
-                    <img src="img/app.svg" alt="icon">
-                    <p>App</p>
-                </a>
-                <a class="app-download" href="#">
-                    <img src="img/help.svg" alt="icon">
-                    <p>Help</p>
-                </a>
-            </div>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div class="mobile__menu">
-            <div class="menu-first">
-                <ul>
-                    <li>
-                        <img src="img/icon-home.png" alt="icon">
-                        <a href="#">Home</a>
-                    </li>
-                    <li class="ng-star-inserted">
-                        <img src="img/icon-sport.png" alt="icon">
-                        <a href="#">Home</a>
-                    </li>
-                    <li class="ng-star-inserted">
-                        <img src="img/icon-sport.png" alt="icon">
-                        <a href="#">Jeetbuzz App Download</a>
-                    </li>
-                </ul>
-                <ul class="promotions-href">
-                    <li>
-                        <img src="img/icon-promotion.png" alt="icon">
-                        <a href="#" rel="nofollow" target="_blank">Promotions</a>
-                    </li>
-                </ul>
-                <div class="service-style__fon">
-                    <div class="service-style">
-                        <img src="img/icon-affiliate.png" alt="icon">
-                        <p>Affiliate</p>
-                    </div>
-                    <div class="service-style">
-                        <img src="img/icon-talk.png" alt="icon">
-                        <div>
-                            <p>24/7 LiveChat</p>
-                            <span>Provides 24/7 Quality service</span>
-                        </div>
-                    </div>
-                    <div class="service-style">
-                        <img src="img/icon-ambassadors.png" alt="icon">
-                        <div>
-                            <p>Brand Ambassador</p>
-                            <span>Play with celebrity</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+          </div>
         <div class="for-mobile-bg"></div>
     </header>
 
@@ -159,19 +99,19 @@
         <div class="swiper banner-slider">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <div class="banner-slider__photo">
-                        <img src="img/banner-1-scaled.jpg" alt="Jeetbuzz banner 1">
-                    </div>
+                    <a href="" class="banner-slider__photo">
+                        <img src="img/banner-1-scaled.webp" alt="Jeetbuzz banner 1">
+                    </a>
                 </div>
                 <div class="swiper-slide">
-                    <div class="banner-slider__photo">
-                        <img src="img/banner-2.jpg" alt="Jeetbuzz banner 2">
-                    </div>
+                    <a href="" class="banner-slider__photo">
+                        <img src="img/banner-2.webp" alt="Jeetbuzz banner 2">
+                    </a>
                 </div>
                 <div class="swiper-slide">
-                    <div class="banner-slider__photo">
-                        <img src="img/banner-3.jpg" alt="Jeetbuzz banner 3">
-                    </div>
+                    <a href="" class="banner-slider__photo">
+                        <img src="img/banner-3.webp" alt="Jeetbuzz banner 3">
+                    </a>
                 </div>
             </div>
         </div>
@@ -179,7 +119,7 @@
 
     <!-- About Us Section -->
     <section class="about-us__main">
-        <div class="container">
+        <div class="containerBox">
             <div class="about-us__info">
                 <h1>Jeetbuzz Live Casino & Betting in India</h1>
 
@@ -267,8 +207,20 @@
                     </div>
 
                     <h2>Account Closing</h2>
-                    <p><strong>Jeetbuzz</strong> is constantly modernizing its responsible gaming policy. If players cannot contain their feelings for any reason, they can close their account. There is also the option of temporarily blocking the account.</p>
-
+                    <p><strong>Jeetbuzz</strong> is constantly <a href="">modernizing</a> its responsible gaming policy. If players cannot contain their feelings for any reason, they can close their account. There is also the option of temporarily blocking the account.</p>
+                    <ul class="content-list">
+                      <li>When the site opens in the browser of your device you need to find the Login button</li>
+                      <li>Now in the login box, enter Username and Password</li>
+                      <li>After that, you can open your account and start playing.</li>
+                  </ul>
+                    
+                    <ol class="ol-list">
+                      <li>Lorem, ipsum dolor.</li>
+                      <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi id porro amet minus sunt tenetur aliquam sed quas ut nihil!</li>
+                      <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                    </ol>
+                    
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consequatur recusandae quisquam!</p>
                     <h2>Jeetbuzz is Legal in India</h2>
                     <p>The <strong>Jeetbuzz</strong> platform is completely legal. This is evidenced by the presence of a Curacao license. Licensing the activity from our side is a very responsible step, because we are obliged to obey all laws and comply with all regulations. But, we are ready for it and offer all services legally.</p>
 
@@ -334,34 +286,34 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="container">
+    <section class="support">
+        <div class="containerBox">
             <h2>FAQ</h2>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question">
+            <div class="faq-containerBox">
+                <div class="support__unit">
+                    <div class="support__head">
                         <h3>How to Withdraw Winnings in Jeetbuzz?</h3>
-                        <div class="faq-toggle"></div>
+                        <div class="support__toggle"></div>
                     </div>
-                    <div class="faq-answer">
+                    <div class="support_body">
                         <p>To withdraw your winnings you need to go to Cashier. This can be done by clicking on your account balance, which is located on the main page. Now specify the withdrawal amount and convenient payment system. After the application is processed, you will receive your funds.</p>
                     </div>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">
+                <div class="support__unit">
+                    <div class="support__head">
                         <h3>How to Get the Jeetbuzz First Deposit Bonus?</h3>
-                        <div class="faq-toggle"></div>
+                        <div class="support__toggle"></div>
                     </div>
-                    <div class="faq-answer">
+                    <div class="support_body">
                         <p>To get your first deposit bonus, you need to register an account. After that, make your first deposit and you will see several offers for your first deposit in your account. You need to choose the one that suits you and click on Activate.</p>
                     </div>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">
+                <div class="support__unit">
+                    <div class="support__head">
                         <h3>Can I Watch Live Streaming On Jeetbuzz Website?</h3>
-                        <div class="faq-toggle"></div>
+                        <div class="support__toggle"></div>
                     </div>
-                    <div class="faq-answer">
+                    <div class="support_body">
                         <p>Every sport on which bets are accepted contains Live Streaming. This means that you can follow the match on our platform.</p>
                     </div>
                 </div>
@@ -371,7 +323,7 @@
 
     <!-- Footer Section -->
     <footer>
-        <div class="container">
+        <div class="containerBox">
             <div class="footer__main">
                 <div class="footer-link__group">
                     <div class="footer-link__box">
@@ -490,11 +442,6 @@
             </div>
         </div>
     </footer>
-
-    <div class="footer_cta_mobile">
-        <a href="#" rel="nofollow" target="_blank">Sign up</a>
-        <a href="#" rel="nofollow" target="_blank">Login</a>
-    </div>
 
     <script src="js/script.js"></script>
 </body>
