@@ -208,6 +208,10 @@ img {
 
 .icon-home, .icon-phone {
   margin-right: 10px;
+  
+}
+
+.icon-home a, .icon-phone a {
   display: flex;
   gap: 10px;
 }
