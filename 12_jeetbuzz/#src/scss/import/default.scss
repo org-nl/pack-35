@@ -125,13 +125,14 @@ img {
 
 .btn-log {
   background-color: transparent;
-  border: 1px solid #158A39;
-  color: #158A39;
+  border: 1px solid #158E39;
+  color: #158E39;
 }
 
 .btn-reg {
   background-color: #f39c12;
   color: #fff;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
 .btn-log:hover {
@@ -457,6 +458,9 @@ img {
   flex-wrap: wrap;
   margin: 20px 0 30px;
   gap: 30px;
+  @media (max-width:#{$md3}px) {
+    flex-direction: column;
+  }
 }
 
 .content-column {
