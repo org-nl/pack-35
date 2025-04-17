@@ -1,29 +1,20 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // FAQ Accordion functionality
+    const faqItems = document.querySelectorAll('.faq-item');
 
-	// This script sets the current year in the footer of the page.
-	let now = new Date();
-	let year = now.getFullYear();
-	let element = document.querySelector("#current-year");
-	element.innerHTML = year;
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-item__question');
 
-	// Lazy load YouTube video
-    const youtubeContainer = document.querySelector('.youtube-boxContent');
-    if (youtubeContainer) {
-        const placeholder = youtubeContainer.querySelector('.youtube-placeholder');
-        const videoId = youtubeContainer.getAttribute('data-video-id');
+        question.addEventListener('click', () => {
+            // Close all other FAQ items
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item && otherItem.classList.contains('active')) {
+                    otherItem.classList.remove('active');
+                }
+            });
 
-        placeholder.addEventListener('click', function() {
-            const iframe = document.createElement('iframe');
-            iframe.setAttribute('src', `https://www.youtube.com/embed/${videoId}?autoplay=1`);
-            iframe.setAttribute('title', 'Melbet Ghana Introduction');
-            iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
-            iframe.setAttribute('allowfullscreen', '');
-            iframe.setAttribute('loading', 'lazy');
-
-            // Replace the placeholder with the iframe
-            youtubeContainer.innerHTML = '';
-            youtubeContainer.appendChild(iframe);
+            // Toggle the clicked FAQ item
+            item.classList.toggle('active');
         });
-    }
-
+    });
 });
