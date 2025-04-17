@@ -4,7 +4,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('fonts/roboto-regular.woff2') format('woff2');
+  src: url('../fonts/roboto-regular.woff2') format('woff2');
 }
 
 @font-face {
@@ -12,7 +12,7 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url('fonts/roboto-bold.woff2') format('woff2');
+  src: url('../fonts/roboto-bold.woff2') format('woff2');
 }
 
 /* Reset and base styles */
@@ -104,8 +104,8 @@ img {
 /* Header Styles */
 .site-header {
   padding: 15px 15px;
-  background-color: #1e272c;
-  border-bottom: 2px solid var(--color-primary);
+  background-color: #4FA680;
+  border-bottom: 2px solid #1e272c;
 }
 
 .topBanner-viewport {
@@ -160,11 +160,13 @@ img {
 .login-btn {
   background-color: var(--color-primary);
   color: #fff;
+  border: 2px solid transparent;
 }
 
 .signup-btn {
   background-color: var(--color-secondary);
   color: #fff;
+  border: 2px solid #fff;
 }
 
 .login-btn:hover, .signup-btn:hover {
@@ -241,7 +243,7 @@ img {
 
 /* Navigation Styles */
 .main-navigation {
-  background-color: #2d3d4d;
+  background-color: var(--color-primary);
   padding: 10px 15px;
   @media (max-width:#{$md3}px) {
     position: fixed;
@@ -252,6 +254,7 @@ img {
     z-index: 120;
     transform: translateX(-120%);
     transition: ease 0.15s;
+    background-color: #1e272c;
     &.active{
       transform: translateX(0%);
     }
@@ -293,6 +296,14 @@ img {
 .nav-menu li a {
   padding: 5px 10px;
   font-size: 14px;
+  text-shadow: 1px 3px 3px rgba(0, 0, 0, .8);
+  &:hover{
+    color: #1e272c;
+    @media (max-width:#{$md3}px) {
+      color: var(--color-primary);
+      text-shadow: none;
+    }
+  }
 }
 
 /* Hero Section Styles */
