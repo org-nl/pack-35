@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (targetElement) {
                 e.preventDefault();
 
-                const headerHeight = document.querySelector('.header').offsetHeight;
+                const headerHeight = document.querySelector('.first-section').offsetHeight;
                 const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
 
                 window.scrollTo({
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
 
-        const header = block.querySelector('.accord-block-header');
+        const header = block.querySelector('.accord-block-first-section');
 
         if (header) {
             header.addEventListener('click', function() {
