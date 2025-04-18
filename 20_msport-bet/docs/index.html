@@ -12,8 +12,8 @@
 
 <body>
   <!-- Navigation Bar -->
-  <footer class="navbar">
-      <div class="container navbar-body">
+  <header class="navbar">
+      <div class="content-area navbar-body">
           <a class="navbar-brand" href="#">
               <img class="logo" src="img/logo.webp" width="218" alt="MSport" height="35">
           </a>
@@ -21,26 +21,26 @@
           <nav class="navbar-menu js-navbar-menu">
             <div class="mobile-menu">
                 <div>Menu</div>
-                <button class="navbar-toggle navbar-toggle--close js-navbar-close">
+                <button class="navbar-toggle navbar-toggle--close js-navbar-close" aria-label="close menu">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
             </div>
             <ul class="navbar-nav">
-                <li><a class="nav-link" href="#">App</a></li>
-                <li><a class="nav-link" href="#">Bonus</a></li>
-                <li><a class="nav-link" href="#">Payments</a></li>
-                <li><a class="nav-link" href="#">iLOT Bet</a></li>
-                <li><a class="nav-link" href="#">Frapapa</a></li>
-                <li><a class="nav-link" href="#">iLOTBET</a></li>
+                <li><a class="navMenuLinkItem" href="#">App</a></li>
+                <li><a class="navMenuLinkItem" href="#">Bonus</a></li>
+                <li><a class="navMenuLinkItem" href="#">Payments</a></li>
+                <li><a class="navMenuLinkItem" href="#">iLOT Bet</a></li>
+                <li><a class="navMenuLinkItem" href="#">Frapapa</a></li>
+                <li><a class="navMenuLinkItem" href="#">iLOTBET</a></li>
             </ul>
           </nav>
 
-          <div class="auth-buttons">
+          <div class="btnRow">
               <a href="#" class="btn btn-outline">Login</a>
               <a href="#" class="btn btn-primary">Sign Up</a>
-              <button class="navbar-toggle js-navbar-open">
+              <button class="navbar-toggle js-navbar-open" aria-label="open menu">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -48,17 +48,19 @@
           </div>
       </div>
       <div class="bg-ower-black js-ower-bg"></div>
-  </footer>
+    </header>
 
-  <!-- Hero Banner -->
-  <section class="hero">
+  <!-- landing-intro Banner -->
+  <section class="landing-intro">
       <a href="#">
-          <img src="img/banner.webp" alt="MSport official site">
+          <img  
+			srcset="img/banner-560.webp 560w, img/banner-768.webp 768w, img/banner-1024.webp 1024w, img/banner-1536.webp 1536w"
+		  sizes="(min-width: 1150px) 1515px, 100vw" loading="lazy" width="1515" height="779" src="img/banner-1536.webp" alt="MSport official site">
       </a>
   </section>
 
   <!-- Main Content -->
-  <main class="container">
+  <main class="content-area">
       <div class="content-section">
           <h1>MSport Bet — Best Online Sports Betting and Live Betting Odds in Nigeria — M Sport</h1>
 
@@ -88,7 +90,7 @@
 
           <!-- Table of Contents -->
           <div class="toc">
-              <h3>Table of Contents</h3>
+              <h2>Table of Contents</h2>
               <ol>
                   <li><a href="#msport-bet-registration">MSport Bet Registration</a></li>
                   <li><a href="#m-sport-sign-up">M Sport Sign Up</a></li>
@@ -165,7 +167,7 @@
 
   <!-- Footer -->
   <footer id="footer">
-      <div class="container">
+      <div class="content-area">
           <ul class="footer-links">
               <li><a href="#">MSport</a></li>
               <li><a href="#">App</a></li>
@@ -185,7 +187,7 @@
   <div class="floating-card">
       <div class="card-content">
           <div class="card-icon">
-              <img src="img/favicon.ico" alt="MSport" height="30">
+              <img src="img/msport-icon.webp" alt="MSport" width="32" height="32">
           </div>
           <div class="card-message">
               <p>Welcome Bonus <b>500 ₦</b> on MSport</p>
