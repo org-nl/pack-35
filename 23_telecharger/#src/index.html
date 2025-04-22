@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="header__container container">
-            <div class="header__logo">
+    <header class="siteTopbar">
+        <div class="siteTopbar__wrap layoutShell">
+            <div class="siteTopbar__brand">
                 <a href="#"><img src="img/logo-mlb.webp" width="182" height="40" alt="Melbet Logo"></a>
             </div>
-            <nav class="header__nav mobile-menu js-mobile-menu">
-                <ul class="header__menu mobile-menu__list">
+            <nav class="siteTopbar__links navPopup js-navPopup">
+                <ul class="siteTopbar__menu navPopup__items">
                     <li><a href="#">Sports</a></li>
                     <li><a href="#">Bonus</a></li>
                     <li><a href="#">Code Promo</a></li>
@@ -22,61 +22,61 @@
                     <li><a href="#">Télécharger</a></li>
                 </ul>
             </nav>
-            <div class="header__cta">
-                <a href="#" class="btn btn--primary">S'inscrire</a>
+            <div class="siteTopbar__action">
+                <a href="#" class="actionBtn actionBtn--main">S'inscrire</a>
             </div>
-            <div class="burger-menu">
-                <div class="burger-menu__bar"></div>
-                <div class="burger-menu__bar"></div>
-                <div class="burger-menu__bar"></div>
+            <div class="menuToggle">
+                <div class="menuToggle__line"></div>
+                <div class="menuToggle__line"></div>
+                <div class="menuToggle__line"></div>
             </div>
         </div>
     </header>
 
-    <main class="main">
-        <section class="hero">
-            <div class="hero__container container">
-                <h1 class="hero__title">Télécharger Melbet Apk pour Android et iOS Application</h1>
-                <div class="hero__content">
+    <main class="pageMain">
+        <section class="introBlock">
+            <div class="introBlock__wrap layoutShell">
+                <h1 class="introBlock__headline">Télécharger Melbet Apk pour Android et iOS Application</h1>
+                <div class="introBlock__text">
                     <p>L'article suivant vous guide à travers le processus de téléchargement de Melbet APK, en mettant l'accent sur le fichier APK pour Android. Que vous soyez un utilisateur d'Android ou d'iOS, nous vous fournirons des instructions détaillées sur la manière de télécharger, installer et mettre à jour l'application en toute sécurité. Découvrez également les fonctionnalités principales de l'application Melbet, notamment la possibilité de parier sur vos sports préférés.</p>
                 </div>
             </div>
         </section>
 
-        <section class="app-overview">
-            <div class="app-overview__container container">
-                <h2 class="section-title">Aperçu de l'application Melbet</h2>
-                <div class="app-overview__content">
-                    <div class="app-overview__text space-y">
+        <section class="featureIntro">
+            <div class="featureIntro__wrap layoutShell">
+                <h2 class="blockTitle">Aperçu de l'application Melbet</h2>
+                <div class="featureIntro__body">
+                    <div class="featureIntro__text vSpacer">
                         <p>L'application Melbet est un outil pratique pour les parieurs de paris sportifs. L'application est facile à télécharger et offre une expérience de jeu fluide sur votre appareil mobile. Son interface est intuitive, ce qui la rend très facile à utiliser. Avec cette application, vous pouvez parier depuis n'importe où et à tout moment.</p>
                         <p>Lorem <a href="">example link</a> ipsum dolor sit amet consectetur adipisicing elit. Quam nihil eos possimus, illum voluptatum soluta explicabo ut. Itaque doloribus a debitis iste distinctio accusamus quae? Commodi, mollitia exercitationem! Animi, ipsum?</p>
                       </div>
-                    <div class="app-overview__image">
+                    <div class="featureIntro__img">
                         <img data-srcsetsizes="580: 320, 580, 768, 1024, 1536" sizes="(min-width: 1220px) 570px, (min-width: 768px) 50vw, 100vw" loading="lazy" width="570" height="428" src="img/melbet-app-overview.webp" alt="Aperçu de l'application Melbet">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="app-download">
-            <div class="app-download__container container">
-                <h2 class="section-title">Melbet Apk pour Android smartphone et tablette</h2>
-                <div class="app-download__content">
-                    <div class="app-download__text">
+        <section class="getApp">
+            <div class="getApp__wrap layoutShell">
+                <h2 class="blockTitle">Melbet Apk pour Android smartphone et tablette</h2>
+                <div class="getApp__body">
+                    <div class="getApp__text">
                         <p>Le nouvel Melbet Apk Application Melbet est compatible avec le plupart des smartphones Android. Offrez-vous plusieurs avantages en téléchargeant l'application mobile. Vous pouvez l'installer rapidement et facilement sur votre téléphone ou tablette. Profitez du paris sportifs, du casino en direct, des bonus et plus encore.</p>
                     </div>
-                    <div class="app-download__image">
+                    <div class="getApp__img">
                         <img data-srcsetsizes="580: 320, 580, 768, 1024, 1536" sizes="(min-width: 1220px) 570px, (min-width: 768px) 50vw, 100vw" loading="lazy" width="570" height="428" src="img/melbet-apk-tablet-mob.webp" alt="Melbet Apk pour Android smartphone et tablette">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="download-instructions">
-            <div class="download-instructions__container container">
-                <h2 class="section-title">Comment télécharger l'APK Melbet sur Android</h2>
-                <div class="download-instructions__steps">
-                    <ol class="download-steps">
+        <section class="installGuide">
+            <div class="installGuide__wrap layoutShell">
+                <h2 class="blockTitle">Comment télécharger l'APK Melbet sur Android</h2>
+                <div class="installGuide__steps">
+                    <ol class="stepList">
                         <li>Visitez le site officiel de Melbet sur votre téléphone Android</li>
                         <li>Accédez à la section "Application" ou faites défiler vers le bas</li>
                         <li>Cliquez sur le bouton "Télécharger APK Android"</li>
@@ -84,35 +84,35 @@
                         <li>Attendez la fin du téléchargement</li>
                     </ol>
                 </div>
-                <div class="download-instructions__image">
+                <div class="installGuide__img">
                     <img data-srcsetsizes="580: 580, 768, 1024, 1200, 1536" sizes="(min-width: 1220px) 1170px, 100vw" loading="lazy" width="1170" height="877" src="img/melbet-app-how-download.webp" alt="Comment télécharger l'APK Melbet sur Android">
                 </div>
             </div>
         </section>
 
-        <section class="app-installation">
-            <div class="app-installation__container container">
-                <h2 class="section-title">Installation de l'APK Melbet pour Android smartphones</h2>
-                <div class="app-installation__content">
+        <section class="setupFlow">
+            <div class="setupFlow__wrap layoutShell">
+                <h2 class="blockTitle">Installation de l'APK Melbet pour Android smartphones</h2>
+                <div class="setupFlow__body">
                     <p>Une fois le fichier APK téléchargé, ouvrez-le fichier dans le gestionnaire de fichiers de votre appareil. Suivez les instructions à l'écran pour installer l'application. Assurez-vous d'avoir activé "sources inconnues" dans les paramètres de sécurité de votre appareil.</p>
                 </div>
             </div>
         </section>
 
-        <section class="ios-download">
-            <div class="ios-download__container container">
-                <h2 class="section-title">Melbet App iPhone et iOS plateformes</h2>
-                <div class="ios-download__content">
+        <section class="iosFlow">
+            <div class="iosFlow__wrap layoutShell">
+                <h2 class="blockTitle">Melbet App iPhone et iOS plateformes</h2>
+                <div class="iosFlow__body">
                     <p>Si vous avez un appareil iOS, comme un iPhone ou un iPad, vous pouvez télécharger l'application Melbet directement depuis l'App Store. Recherchez "Melbet" dans l'App Store et téléchargez l'application officielle.</p>
                 </div>
             </div>
         </section>
 
-        <section class="ios-instructions">
-            <div class="ios-instructions__container container">
-                <h2 class="section-title">Comment télécharger Melbet App sur iPhone appareils ?</h2>
-                <div class="ios-instructions__steps">
-                    <ol class="download-steps">
+        <section class="iosGuide">
+            <div class="iosGuide__wrap layoutShell">
+                <h2 class="blockTitle">Comment télécharger Melbet App sur iPhone appareils ?</h2>
+                <div class="iosGuide__steps">
+                    <ol class="stepList">
                         <li>Accédez au site officiel de Melbet depuis votre iPhone</li>
                         <li>Allez dans la section Applications</li>
                         <li>Cliquez sur "Télécharger pour iOS"</li>
@@ -123,25 +123,25 @@
             </div>
         </section>
 
-        <section class="why-download">
-            <div class="why-download__container container">
-                <h2 class="section-title">Pourquoi Télécharger l'Application Melbet ?</h2>
-                <div class="why-download__content">
-                    <div class="why-download__text">
+        <section class="benefitsBlock">
+            <div class="benefitsBlock__wrap layoutShell">
+                <h2 class="blockTitle">Pourquoi Télécharger l'Application Melbet ?</h2>
+                <div class="benefitsBlock__body">
+                    <div class="benefitsBlock__text">
                         <p>L'application Melbet offre une meilleure expérience, plus rapide et accessible à tout moment. Vous profitez de nombreux avantages exclusifs, tels que des notifications en temps réel, des fonctionnalités optimisées pour mobile et des promotions spéciales pour utilisateurs de l'application mobile.</p>
                     </div>
-                    <div class="why-download__image">
+                    <div class="benefitsBlock__img">
                         <img data-srcsetsizes="580: 320, 580, 768, 1024, 1536" sizes="(min-width: 1220px) 570px, (min-width: 768px) 50vw, 100vw" loading="lazy" width="570" height="428" src="img/melbet-why-download.webp" alt="Pourquoi Télécharger l'Application Melbet">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="app-features">
-            <div class="app-features__container container">
-                <h2 class="section-title">Fonctionnalités principales de Melbet App</h2>
-                <div class="app-features__list">
-                    <ul class="features-list">
+        <section class="keyPoints">
+            <div class="keyPoints__wrap layoutShell">
+                <h2 class="blockTitle">Fonctionnalités principales de Melbet App</h2>
+                <div class="keyPoints__list">
+                    <ul class="pointsList">
                         <li>Interface intuitive et facile à utiliser</li>
                         <li>Paris sportifs en direct et pré-match</li>
                         <li>Casino et jeux de hasard disponibles</li>
@@ -152,10 +152,10 @@
             </div>
         </section>
 
-        <section class="bonus-section">
-            <div class="bonus-section__container container">
-                <h2 class="section-title">Bonus et promotions sur mobile Melbet</h2>
-                <div class="bonus-section__content">
+        <section class="extraOffer">
+            <div class="extraOffer__wrap layoutShell">
+                <h2 class="blockTitle">Bonus et promotions sur mobile Melbet</h2>
+                <div class="extraOffer__body">
                     <p>Les bonus et promotions disponibles sont généralement généreux chez Melbet, avec des bonus de bienvenue pouvant aller jusqu'à 130€. Les joueurs peuvent également profiter de bonus sans dépôt, de paris gratuits et de promotions spéciales lors d'événements sportifs majeurs.</p>
                 </div>
             </div>
@@ -163,28 +163,28 @@
     </main>
 
     <aside>
-      <button class="scrollToTOp-btn" aria-label="scroll to top"></button>
+      <button class="goUpBtn" aria-label="scroll to top"></button>
     </aside>
 
-    <footer class="footer">
-        <div class="footer__container container">
-            <div class="footer__info">
+    <footer class="siteBottom">
+        <div class="siteBottom__wrap layoutShell">
+            <div class="siteBottom__info">
                 <h3>PLUS D'INFORMATIONS</h3>
-                <ul class="footer__links">
+                <ul class="siteBottom__links">
                     <li><a href="#">Qui sommes-nous ?</a></li>
                     <li><a href="#">Conditions générales</a></li>
                     <li><a href="#">Politique de confidentialité</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </div>
-            <div class="footer__social">
-                <a title="facebook" href="#" class="social-icon social-icon--facebook" aria-label="link facebook"></a>
-                <a title="twitter" href="#" class="social-icon social-icon--twitter" aria-label="link twitter"></a>
-                <a title="instagram" href="#" class="social-icon social-icon--instagram" aria-label="link instagram"></a>
-                <a title="youtube" href="#" class="social-icon social-icon--youtube" aria-label="link youtube"></a>
-                <a title="telegram" href="#" class="social-icon social-icon--telegram" aria-label="link telegram"></a>
+            <div class="siteBottom__social">
+                <a title="facebook" href="#" class="socialBtn socialBtn--fb" aria-label="link facebook"></a>
+                <a title="twitter" href="#" class="socialBtn socialBtn--tw" aria-label="link twitter"></a>
+                <a title="instagram" href="#" class="socialBtn socialBtn--ig" aria-label="link instagram"></a>
+                <a title="youtube" href="#" class="socialBtn socialBtn--yt" aria-label="link youtube"></a>
+                <a title="telegram" href="#" class="socialBtn socialBtn--tg" aria-label="link telegram"></a>
             </div>
-            <div class="footer__copyright">
+            <div class="siteBottom__copy">
                 <p>© 2025 Melbet</p>
             </div>
         </div>

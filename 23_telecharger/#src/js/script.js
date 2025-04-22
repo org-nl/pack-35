@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Melbet website clone loaded successfully!');
 
     // Burger menu toggle
-    const burgerMenu = document.querySelector('.burger-menu');
-    const mobileMenu = document.querySelector('.js-mobile-menu');
+    const burgerMenu = document.querySelector('.menuToggle');
+    const mobileMenu = document.querySelector('.js-navPopup');
 
     if (burgerMenu) {
         burgerMenu.addEventListener('click', function() {
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         // Close mobile menu when a link is clicked
-        const mobileMenuLinks = document.querySelectorAll('.header__menu a');
+        const mobileMenuLinks = document.querySelectorAll('.siteTopbar__menu a');
         mobileMenuLinks.forEach(link => {
             link.addEventListener('click', function() {
                 burgerMenu.classList.remove('active');
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Scroll to top button
-    const scrollToTopBtn = document.querySelector('.scrollToTOp-btn');
+    const scrollToTopBtn = document.querySelector('.goUpBtn');
     window.addEventListener('scroll', function() {
         if (window.scrollY > 300) {
             scrollToTopBtn.classList.add('active');
