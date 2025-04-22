@@ -95,7 +95,8 @@ p {
 }
 
 .button1, .button2 {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   padding: 10px 20px;
   border-radius: 5px;
   font-weight: 700;
@@ -385,6 +386,7 @@ p {
 
   .button1, .button2 {
       flex: 1;
+      justify-content: center;
       text-align: center;
   }
 
