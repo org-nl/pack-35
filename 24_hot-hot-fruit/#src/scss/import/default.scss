@@ -155,7 +155,7 @@ section {
 
 /* Hero Section */
 .hero-banner {
-  background-image: url('../img/hot-hot-fruit-slot.jpg.webp');
+  background-image: url('../img/hot-hot-fruit-slot.webp');
   background-size: cover;
   background-position: center;
   color: white;
@@ -181,7 +181,7 @@ section {
 .hero-banner h1 {
   font-size: 4rem;
   margin-bottom: 20px;
-  font-weight: 800;
+  font-weight: 700;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -930,10 +930,10 @@ section a:not([class]){
 }
 
 /* For Animations */
-section {
+section:not(.visible-on-load) {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 section.section-visible {
