@@ -80,30 +80,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Simple form validation (if there were forms)
-    const forms = document.querySelectorAll('form');
-
-    forms.forEach(form => {
-        form.addEventListener('submit', function(e) {
-            const requiredFields = form.querySelectorAll('[required]');
-            let isValid = true;
-
-            requiredFields.forEach(field => {
-                if (!field.value.trim()) {
-                    isValid = false;
-                    field.classList.add('form-field--error');
-                } else {
-                    field.classList.remove('form-field--error');
-                }
-            });
-
-            if (!isValid) {
-                e.preventDefault();
-                alert('Please fill in all required fields.');
-            }
-        });
-    });
-
     // FAQ accordion functionality (if needed)
     const faqItems = document.querySelectorAll('.faq-item');
 
@@ -115,23 +91,5 @@ document.addEventListener('DOMContentLoaded', function() {
                 item.classList.toggle('faq-item--active');
             });
         }
-    });
-
-    // Registration/Login button handlers
-    const registerButtons = document.querySelectorAll('.header__button--primary, .hero__button--primary');
-    const loginButtons = document.querySelectorAll('.header__button--secondary');
-
-    registerButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            alert('Registration process would start here in the actual Melbet site.');
-        });
-    });
-
-    loginButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            alert('Login process would start here in the actual Melbet site.');
-        });
     });
 });
