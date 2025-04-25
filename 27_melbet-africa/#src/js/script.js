@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Active TOC link highlighting
-    const tocLinks = document.querySelectorAll('.toc__link');
+    const tocLinks = document.querySelectorAll('.topics__link');
     const sections = document.querySelectorAll('section[id]');
 
     if (tocLinks.length && sections.length) {
@@ -78,18 +78,5 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
         });
-    });
-
-    // FAQ accordion functionality (if needed)
-    const faqItems = document.querySelectorAll('.faq-item');
-
-    faqItems.forEach(item => {
-        const header = item.querySelector('.faq-item__header');
-
-        if (header) {
-            header.addEventListener('click', function() {
-                item.classList.toggle('faq-item--active');
-            });
-        }
     });
 });
