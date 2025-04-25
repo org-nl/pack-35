@@ -1,0 +1,33 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --brand-color: #FFE60F;
+  --brand-color-2: #10A310;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica", "Arial", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Fira Sans", "Droid Sans", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f5f5;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section a:not([class]){
+  text-decoration: underline;
+}
+
+ul, ol {
+  list-style-position: inside;
+  padding-left: 20px;
+}

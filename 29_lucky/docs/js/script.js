@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",(function(){const e=document.querySelector(".pageNavbar-toggler"),t=document.querySelector(".pageNavbar-collapse");e&&t&&e.addEventListener("click",(function(){t.classList.toggle("show"),t.classList.contains("show")?t.style.display="block":t.style.display=""}))}));
