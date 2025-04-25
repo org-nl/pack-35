@@ -7,7 +7,7 @@
 
 :root {
   --primary-color: #2c3189;
-  --secondary-color: #d54450;
+  --secondary-color: #D33C48;
   --accent-color: #e5ae35;
   --text-light: #f8f9f8;
   --text-dark: #333;
@@ -110,7 +110,8 @@ img {
 }
 
 .nav-link.sign-up {
-  color: #e5ae35;
+  color: var(--primary-color);
+  text-decoration: underline;
 }
 
 .nav-link.free {
