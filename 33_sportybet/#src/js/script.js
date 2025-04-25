@@ -69,37 +69,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Rating star functionality
-    const ratingStars = document.querySelectorAll('.star-rating span');
-
-    ratingStars.forEach((star, index) => {
-        star.addEventListener('click', function() {
-            // Update visually selected stars
-            ratingStars.forEach((s, i) => {
-                if (i <= index) {
-                    s.classList.add('active');
-                } else {
-                    s.classList.remove('active');
-                }
-            });
-
-            // Here you could add code to send rating to a backend
-            // For this demo, we'll just show a thank you message
-            const ratingContainer = star.closest('.rating-container');
-            const thanksMsg = document.createElement('div');
-            thanksMsg.className = 'rating-thanks';
-            thanksMsg.textContent = 'Thank you for your rating!';
-
-            // Remove any existing thank you message
-            const existingMsg = ratingContainer.querySelector('.rating-thanks');
-            if (existingMsg) {
-                ratingContainer.removeChild(existingMsg);
-            }
-
-            ratingContainer.appendChild(thanksMsg);
-        });
-    });
-
     // Scroll to top button functionality
     const goTop = document.getElementById('goTop');
 
@@ -121,4 +90,26 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+
+    // Smooth scrolling for anchor links
+    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+
+    anchorLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+
+            if (targetId === '#') return;
+
+            e.preventDefault();
+
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 15, // Adjust for header height
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
 });

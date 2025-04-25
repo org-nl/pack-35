@@ -17,7 +17,6 @@ body {
   line-height: 1.6;
   color: #333;
   background-color: #f9f9f9;
-  padding-top: 60px;
 }
 
 a {
@@ -42,27 +41,50 @@ img {
 
 /* Header Styles */
 .site-header {
-  background-color: #fff;
+  background: url("../img/bg.webp") no-repeat center center;
+  background-size: cover;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-}
-
-.site-branding {
-  padding: 10px 0;
+  position: relative;
+  &__top{
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(16px);
+    position: relative;
+    z-index: 100;
+  }
+  &__flex{
+    display: flex;
+    align-items: center;
+    padding: 25px 15px;
+    justify-content: space-between;
+  }
 }
 
 .site-title {
-  font-size: 24px;
+  font-size: 30px;
+  font-weight: 700;
   margin: 0;
 }
 
 .primary-navigation {
   background-color: var(--color-green);
-  //background: linear-gradient();
+  background: linear-gradient(108deg, #0d9436,#28a04d);
+  .container{
+    padding: 0;
+  }
+  @media (max-width:#{$md3}px) {
+    position: absolute;
+    top: 96px;
+    left: 0;
+    width: 100%;
+    z-index: 30;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 1px 2px 8px #0a2713;
+    transform: translateY(-140%);
+    transition: ease 0.2s;
+    &.active{
+      transform: translateY(0);
+    }
+  }
 }
 
 .menu {
@@ -71,6 +93,10 @@ img {
   flex-wrap: wrap;
   margin: 0;
   padding-left: 0;
+  @media (max-width:#{$md3}px) {
+    flex-direction: column;
+    width: 100%;
+  }
 }
 
 .menu li {
@@ -113,6 +139,9 @@ img {
     visibility: visible;
     opacity: 1;
   }
+  @media (max-width:#{$md3}px) {
+    right: 15px;
+  }
 }
 
 /* Burger Menu */
@@ -122,7 +151,7 @@ img {
   width: 30px;
   height: 20px;
   position: relative;
-  margin: 15px;
+  //margin: 15px;
 }
 
 .burger-menu span {
@@ -177,11 +206,27 @@ img {
   min-width: 0;
 }
 
+.single{
+  margin-top: 40px;
+  &__body{
+    display: grid;
+    gap: 25px;
+    grid-template-columns: 4fr 1fr;
+    @media (max-width:#{$md2}px) {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+  }
+}
+
 .post-single-content {
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  a:not([class]){
+    text-decoration: underline;
+  }
 }
 
 .title {
@@ -317,15 +362,34 @@ ol li:before {
 
 /* Sidebar */
 .sidebar {
-  width: 300px;
-  margin-left: 30px;
+  width: 100%;
+}
+
+.child-space {
+  > *:not(:last-child){
+    margin-bottom: 15px;
+  }
+  > :where(h2, h3):not(:last-child){
+    margin-top: 25px;
+    margin-bottom: 12px;
+  }
+  img{
+    max-width: 100%;
+    border-radius: 6px;
+  }
 }
 
 .sidebar_list {
+  position: sticky;
+  top: 30px;
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  @media (max-width:#{$md2}px) {
+    width: 100%;
+  }
 }
 
 .widget-title {
@@ -342,7 +406,7 @@ ol li:before {
 .faq-item {
   margin-bottom: 20px;
   border-bottom: 1px solid #eee;
-  padding-bottom: 20px;
+  padding: 20px 0;
 }
 
 .faq-item h3 {
@@ -385,6 +449,7 @@ ol li:before {
 }
 
 .bonus-logo {
+  width: 100px;
   flex: 0 0 100px;
   margin-right: 20px;
 }
@@ -394,20 +459,41 @@ ol li:before {
 }
 
 .bonus-button {
-  background-color: #32ce62;
+  background-color:#28a04d; 
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
-  display: inline-block;
+  display: inline-flex;
   margin-top: 10px;
   border: none;
   cursor: pointer;
   font-weight: bold;
   text-transform: uppercase;
+  &_ANIMATED{
+    position: relative;
+    overflow: hidden;
+    &:before{
+      content: "";
+      position: absolute;
+      top: -50px;
+      left: -50px;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0), #fff, rgba(255, 255, 255, 0));
+      transform: skew(-15deg);
+      width: 20px;
+      height: 100px;
+      opacity: 0.5;
+      animation: irst 2.4s ease-in-out 2.2s infinite;
+    }
+  }
+}
+
+@keyframes irst {
+  0%{left: -200px;}
+  100%{left: 200px;}
 }
 
 .bonus-button:hover {
-  background-color: #28a04d;
+  background-color: #32ce62;
   text-decoration: none;
 }
 
@@ -435,17 +521,6 @@ ol li:before {
 @media (max-width: 768px) {
   .burger-menu {
     display: block;
-    float: right;
-  }
-
-  .menu {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .menu.active {
-    display: flex;
   }
 
   .content {
