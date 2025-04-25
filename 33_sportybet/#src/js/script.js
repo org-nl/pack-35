@@ -38,37 +38,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Bonus code copy functionality
-    const copyButtons = document.querySelectorAll('.bonus-display button');
-
-    copyButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const bonusCode = this.getAttribute('data-code');
-            if (!bonusCode) return;
-
-            // Create temporary input element
-            const tempInput = document.createElement('input');
-            tempInput.value = bonusCode;
-            document.body.appendChild(tempInput);
-
-            // Select and copy the text
-            tempInput.select();
-            document.execCommand('copy');
-
-            // Remove temporary element
-            document.body.removeChild(tempInput);
-
-            // Update button text to indicate copied
-            const originalText = this.textContent;
-            button.textContent = 'Copied!';
-
-            // Reset button text after 2 seconds
-            setTimeout(() => {
-                button.textContent = originalText;
-            }, 2000);
-        });
-    });
-
     // Scroll to top button functionality
     const goTop = document.getElementById('goTop');
 

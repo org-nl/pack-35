@@ -9,7 +9,7 @@
 
 :root {
   --color-gray: #dfd9d9;
-  --color-green: #31b55b;
+  --color-green: #248443;
 }
 
 body {
@@ -63,6 +63,9 @@ img {
   font-size: 30px;
   font-weight: 700;
   margin: 0;
+  a{
+    color: #fff;
+  }
 }
 
 .primary-navigation {
@@ -459,7 +462,7 @@ ol li:before {
 }
 
 .bonus-button {
-  background-color:#28a04d; 
+  background-color:var(--color-green); 
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
@@ -514,6 +517,7 @@ ol li:before {
   }
   &_lnk{
     color: #f8f8f8;
+    text-decoration: underline;
   }
 }
 

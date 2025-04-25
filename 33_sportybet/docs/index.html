@@ -6,84 +6,6 @@
     <title>SportyBet Nigeria: Amazing Betting Site to Try</title>
     <meta name="description" content="SportyBet is an impressive online sports betting platform known for its numerous game offerings, high odds, and fast payouts.">
     <link rel="stylesheet" href="css/style.css">
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Список уникальных изображений без атрибута width
-        let imagesList = new Map();
-
-        setTimeout(() => {
-            // Получаем все изображения на странице
-            const existingImg = document.querySelectorAll('img');
-            console.log("%cВсего картинок: " + existingImg.length, "color: yellow; font-weight: bold;");
-
-            // Фильтруем те изображения, у которых нет атрибута 'width'
-            const imagesWithoutWidth = Array.from(existingImg).filter(img => !img.hasAttribute('width'));
-            console.log("%cВсего картинок без width: " + imagesWithoutWidth.length, "color: yellow; font-weight: bold;");
-            
-            // Перебираем изображения без width
-            imagesWithoutWidth.forEach((img, index) => {
-                // Получаем имя файла из URL картинки
-                const filename = img.src.split('/').pop();
-            
-                // Попытка получить размер файла
-                fetch(img.src)
-                .then(res => res.blob())
-                .then(blob => {
-                    const sizeKB = (blob.size / 1024);
-
-                    // Получаем текущие размеры изображения на странице
-                    const displayedWidth = img.offsetWidth;
-                    const displayedHeight = img.offsetHeight;
-            
-                    imagesList.set(filename, {
-                    displayedWidth,
-                    displayedHeight,
-                    naturalWidth: img.naturalWidth,
-                    naturalHeight: img.naturalHeight,
-                    sizeKB
-                    });
-                    if(index === imagesWithoutWidth.length - 1) {
-                        showInfo();
-                    }
-                })
-                .catch(err => console.warn('Нельзя получить размер:', err));
-            });        
-        }, 2000);
-
-        function showInfo() {
-            console.log("%cУникальных неповторяющихся картинок: " + imagesList.size, "color: yellow; font-weight: bold;");
-            console.log(imagesList);
-            
-            // Фильтруем изображения по размеру больше 4 КБ
-            const filteredImagesBySize = new Map(
-                [...imagesList.entries()].filter(([filename, data]) => data.sizeKB > 4)
-            );
-
-            console.log("%cКартинок с размером больше 4 КБ: " + filteredImagesBySize.size, "color: yellow; font-weight: bold;");
-            console.log(filteredImagesBySize);
-
-            const filteredImagesByRatio = new Map(
-                [...filteredImagesBySize.entries()].filter(([filename, data]) => data.naturalWidth > data.displayedWidth * 2.5)
-            );
-
-            console.log("%cКартинок с соотношением размеров больше 2.5: " + filteredImagesByRatio.size, "color: yellow; font-weight: bold;");
-            console.log(filteredImagesByRatio);
-
-            const mapCode = `const siteImageParams = new Map([\n${
-                Array.from(filteredImagesBySize.entries())
-                .map(([key, value]) => {
-                    const formattedObject = Object.entries(value)
-                    .map(([prop, val]) => `    ${prop}: ${JSON.stringify(val)}`)
-                    .join(',\n');
-                    return `  ["${key}", {\n${formattedObject}\n  }],`;
-                })
-                .join('\n')
-            }\n]);`;
-            
-            console.log(mapCode);
-        }
-    });
-</script>
 </head>
 <body>
     <header class="site-header" role="banner">
@@ -392,7 +314,7 @@
         </div>
     </main>
 
-    <button class="goTop" id="goTop">
+    <button class="goTop" id="goTop" aria-label="btn scroll top">
       <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"/></svg>
     </button>
 
