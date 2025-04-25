@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Handle FAQ toggles
-    const faqItems = document.querySelectorAll('.faq-item h3');
+    const faqItems = document.querySelectorAll('.qaOne h3');
 
     faqItems.forEach(item => {
         item.addEventListener('click', function() {
