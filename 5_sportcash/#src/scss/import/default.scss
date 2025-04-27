@@ -28,6 +28,11 @@ a {
   color: inherit;
 }
 
+a:not([class]){
+  color: blue;
+  text-decoration: underline;
+}
+
 ul {
   list-style: none;
 }
@@ -42,6 +47,58 @@ ul {
 .top-bar-logo {
   height: 40px;
   display: inline-block;
+}
+
+/* Burger Menu */
+.btnBurger {
+  display: none;
+  cursor: pointer;
+  width: 30px;
+  height: 20px;
+  position: relative;
+  @media (max-width:#{$md3}px) {
+    display: block;
+  }
+}
+
+.btnBurger span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #1d6347;
+  border-radius: 3px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+.btnBurger span:nth-child(1) {
+  top: 0px;
+}
+
+.btnBurger span:nth-child(2) {
+  top: 8px;
+}
+
+.btnBurger span:nth-child(3) {
+  top: 16px;
+}
+
+.btnBurger.active span:nth-child(1) {
+  top: 8px;
+  transform: rotate(135deg);
+}
+
+.btnBurger.active span:nth-child(2) {
+  opacity: 0;
+  transition: none;
+}
+
+.btnBurger.active span:nth-child(3) {
+  top: 8px;
+  transform: rotate(-135deg);
 }
 
 /* Header Styles */
@@ -74,6 +131,12 @@ ul {
 .main-nav {
   margin-top: 10px;
   width: 100%;
+  @media (max-width:#{$md3}px) {
+    display: none;
+    &.active{
+      display: block;
+    }
+  }
 }
 
 .nav-list {
@@ -142,7 +205,7 @@ ul {
 .section-title {
   font-size: 1.8rem;
   color: #1d6347;
-  margin: 40px 0 20px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
@@ -151,16 +214,19 @@ ul {
   line-height: 1.7;
 }
 
+.centered{
+  display: grid;
+  place-items: center;
+}
+
+.md4-w-max{
+  @media (max-width:#{$md4}px) {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 /* Registration Methods Section */
-.registration-methods {
-  padding: 40px 0;
-}
-
-.registration-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
 .bonus-image {
   margin: 30px 0;
   text-align: center;
@@ -172,9 +238,13 @@ ul {
 }
 
 /* Account Creation Section */
-.account-creation {
+.light-region{
   padding: 40px 0;
   background-color: #f5f5f5;
+}
+
+.white-region{
+  padding: 40px 0;
 }
 
 .registration-form-image {
@@ -188,29 +258,24 @@ ul {
   border-radius: 4px;
 }
 
-.registration-steps {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.steps-list {
+.steps-list, .point-list {
   margin: 20px 0;
   padding-left: 20px;
+  
+  li{
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 10px;
+  }
 }
 
-.step-item {
-  margin-bottom: 15px;
-  position: relative;
-  padding-left: 10px;
+.point-list{
+  list-style-type: disc;
 }
 
 /* Bonus Section */
-.bonus-section {
-  padding: 50px 0;
-}
-
 .bonus-content {
-  text-align: center;
+
 }
 
 .goalkeeper-image {
@@ -234,6 +299,16 @@ ul {
   font-size: 1.1rem;
   transition: background-color 0.3s;
   margin: 20px 0;
+  white-space: nowrap;
+  position: relative;
+}
+
+.cta-button::after, .hero-button::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.01);
+  pointer-events: none;
 }
 
 .cta-button:hover {
@@ -241,15 +316,8 @@ ul {
 }
 
 /* FAQ Section */
-.faq-section {
-  padding: 40px 0;
-  background-color: #f5f5f5;
-  text-align: center;
-}
-
 .faq-content {
-  max-width: 700px;
-  margin: 0 auto;
+  
 }
 
 .faq-item {
@@ -263,7 +331,6 @@ ul {
   background-color: #1d6347;
   color: #fff;
   padding: 30px 0;
-  margin-top: 40px;
 }
 
 .footer-content {
@@ -274,18 +341,12 @@ ul {
 
 .footer-legal {
   font-size: 0.9rem;
-  margin-top: 20px;
 }
 
 /* Responsive Styles */
 @media (min-width: 768px) {
   .header__container {
       flex-wrap: nowrap;
-  }
-
-  .main-nav {
-      width: auto;
-      margin-top: 0;
   }
 
   .hero-title {
@@ -299,11 +360,16 @@ ul {
   }
 
   .bonus-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
       gap: 30px;
       align-items: center;
       text-align: left;
+      > * {
+        flex: 1 1 50%;
+      }
+  }
+  .bonus-content.bonus-content-reversed{
+    flex-direction: row-reverse;
   }
 
   .goalkeeper-image {
