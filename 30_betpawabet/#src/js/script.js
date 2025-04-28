@@ -1,7 +1,7 @@
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Burger menu
-    const btn = document.querySelector('.btnBurger');
+    const btn = document.querySelector('.btnListItem');
     const menu = document.querySelector('.js-main-nav');
     
     btn.addEventListener('click', function () {
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const targetElement = document.querySelector(targetId);
 
                 if (targetElement) {
-                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    const headerHeight = document.querySelector('.topbar').offsetHeight;
                     const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
 
                     window.scrollTo({
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // FAQ details element interaction
-    const faqItems = document.querySelectorAll('.faq-container details');
+    const faqItems = document.querySelectorAll('.customer-questions details');
 
     faqItems.forEach(item => {
         item.addEventListener('toggle', function() {
