@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add automatic year update in the footer copyright
     const currentYear = new Date().getFullYear();
-    const copyrightEl = document.querySelector('.footer-legal p span');
+    const copyrightEl = document.querySelector('.site-bottom_legal p span');
     if (copyrightEl) {
         copyrightEl.textContent = currentYear;
     }

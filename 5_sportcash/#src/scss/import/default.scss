@@ -12,7 +12,7 @@ body {
   background-color: #faf9f9;
 }
 
-.container {
+.layout {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
@@ -28,7 +28,7 @@ a {
   color: inherit;
 }
 
-a:not([class]){
+a:not([class]) {
   color: blue;
   text-decoration: underline;
 }
@@ -56,7 +56,9 @@ ul {
   width: 30px;
   height: 20px;
   position: relative;
-  @media (max-width:#{$md3}px) {
+}
+@media (max-width: 767.98px) {
+  .btnBurger {
     display: block;
   }
 }
@@ -102,7 +104,7 @@ ul {
 }
 
 /* Header Styles */
-.header {
+.topframe {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
@@ -110,7 +112,7 @@ ul {
   z-index: 100;
 }
 
-.header__container {
+.topframe__container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 10px 15px;
@@ -131,25 +133,27 @@ ul {
 .main-nav {
   margin-top: 10px;
   width: 100%;
-  @media (max-width:#{$md3}px) {
+}
+@media (max-width: 767.98px) {
+  .main-nav {
     display: none;
-    &.active{
-      display: block;
-    }
+  }
+  .main-nav.active {
+    display: block;
   }
 }
 
-.nav-list {
+.navzone_list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.nav-item {
+.navzone_item {
   margin: 5px 10px;
 }
 
-.nav-link {
+.navzone_link {
   color: #1d6347;
   font-weight: 500;
   padding: 5px 10px;
@@ -157,37 +161,37 @@ ul {
   transition: background-color 0.3s;
 }
 
-.nav-link:hover {
+.navzone_link:hover {
   background-color: #f0f0f0;
 }
 
 /* Hero Section */
-.hero-section {
+.startscreen_section {
   background-color: #1d6347;
   color: #fff;
   text-align: center;
   padding: 50px 20px;
 }
 
-.hero-container {
+.startscreen_container {
   max-width: 800px;
   margin: 0 auto;
 }
 
-.hero-title {
+.startscreen_title {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 20px;
   text-transform: uppercase;
 }
 
-.hero-text {
+.startscreen_text {
   font-size: 1rem;
   margin-bottom: 30px;
   line-height: 1.7;
 }
 
-.hero-button {
+.startscreen_button {
   display: inline-block;
   background-color: #ec9226;
   color: #fff;
@@ -197,7 +201,7 @@ ul {
   transition: background-color 0.3s;
 }
 
-.hero-button:hover {
+.startscreen_button:hover {
   background-color: #d8841f;
 }
 
@@ -214,13 +218,13 @@ ul {
   line-height: 1.7;
 }
 
-.centered{
+.centered {
   display: grid;
   place-items: center;
 }
 
-.md4-w-max{
-  @media (max-width:#{$md4}px) {
+@media (max-width: 479.98px) {
+  .md4-w-max {
     width: 100%;
     text-align: center;
   }
@@ -238,12 +242,12 @@ ul {
 }
 
 /* Account Creation Section */
-.light-region{
+.light-region {
   padding: 40px 0;
   background-color: #f5f5f5;
 }
 
-.white-region{
+.white-region {
   padding: 40px 0;
 }
 
@@ -261,23 +265,18 @@ ul {
 .steps-list, .point-list {
   margin: 20px 0;
   padding-left: 20px;
-  
-  li{
-    margin-bottom: 15px;
-    position: relative;
-    padding-left: 10px;
-  }
+}
+.steps-list li, .point-list li {
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 10px;
 }
 
-.point-list{
+.point-list {
   list-style-type: disc;
 }
 
 /* Bonus Section */
-.bonus-content {
-
-}
-
 .goalkeeper-image {
   max-width: 600px;
   margin: 0 auto 30px;
@@ -289,7 +288,7 @@ ul {
   width: 100%;
 }
 
-.cta-button {
+.hotspotBtn {
   display: inline-block;
   background-color: #ec9226;
   color: #fff;
@@ -303,23 +302,19 @@ ul {
   position: relative;
 }
 
-.cta-button::after, .hero-button::after {
-  content: '';
+.hotspotBtn::after, .startscreen_button::after {
+  content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255,255,255,0.01);
+  background: rgba(255, 255, 255, 0.01);
   pointer-events: none;
 }
 
-.cta-button:hover {
+.hotspotBtn:hover {
   background-color: #d8841f;
 }
 
 /* FAQ Section */
-.faq-content {
-  
-}
-
 .faq-item {
   margin-bottom: 20px;
   border-bottom: 1px solid #ddd;
@@ -327,79 +322,69 @@ ul {
 }
 
 /* Footer */
-.footer {
+.site-bottom {
   background-color: #1d6347;
   color: #fff;
   padding: 30px 0;
 }
 
-.footer-content {
+.site-bottom_content {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.footer-legal {
+.site-bottom_legal {
   font-size: 0.9rem;
 }
 
 /* Responsive Styles */
 @media (min-width: 768px) {
-  .header__container {
-      flex-wrap: nowrap;
+  .topframe__container {
+    flex-wrap: nowrap;
   }
-
-  .hero-title {
-      font-size: 2.5rem;
+  .startscreen_title {
+    font-size: 2.5rem;
   }
-
   .registration-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-
   .bonus-content {
-      display: flex;
-      gap: 30px;
-      align-items: center;
-      text-align: left;
-      > * {
-        flex: 1 1 50%;
-      }
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    text-align: left;
   }
-  .bonus-content.bonus-content-reversed{
+  .bonus-content > * {
+    flex: 1 1 50%;
+  }
+  .bonus-content.bonus-content-reversed {
     flex-direction: row-reverse;
   }
-
   .goalkeeper-image {
-      grid-column: 1;
+    grid-column: 1;
   }
-
   .bonus-content .section-text,
-  .bonus-content .cta-button {
-      grid-column: 2;
+  .bonus-content .hotspotBtn {
+    grid-column: 2;
   }
 }
-
 @media (max-width: 767px) {
-  .nav-list {
-      flex-direction: column;
+  .navzone_list {
+    flex-direction: column;
   }
-
-  .nav-item {
-      margin: 5px 0;
+  .navzone_item {
+    margin: 5px 0;
   }
-
-  .hero-title {
-      font-size: 1.8rem;
+  .startscreen_title {
+    font-size: 1.8rem;
   }
-
   .section-title {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 }
-
 /* Specific Utility Classes */
 .text-center {
   text-align: center;
