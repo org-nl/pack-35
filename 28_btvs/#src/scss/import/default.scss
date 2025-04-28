@@ -67,6 +67,18 @@ ul, ol {
   display: flex;
 }
 
+.header__cta{
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  @media (max-width:#{$md4}px) {
+    width: 100%;
+    > * {
+      flex: 1;
+    }
+  }
+}
+
 .nav-list {
   display: flex;
   gap: 20px;
@@ -99,6 +111,7 @@ ul, ol {
 .button--primary {
   background-color: #eab81f;
   color: #252526;
+  border: 2px solid transparent;
 }
 
 .button--primary:hover {
@@ -132,9 +145,10 @@ section {
   font-weight: 700;
   text-align: center;
   margin-bottom: 30px;
-  color: #252526;
+
   position: relative;
   padding-bottom: 15px;
+  color: #eab81f;
 }
 
 .section-title::after {
@@ -278,48 +292,9 @@ section {
 }
 
 /* Registration section */
-.registration {
-  background-color: #252526;
-  color: #fff;
-  padding: 50px 0;
-}
-
-.registration .section-title {
-  color: #eab81f;
-}
-
-.registration__content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 30px;
-  margin-bottom: 30px;
-}
-
-.registration__text {
-  flex: 1;
-}
 
 .registration__image {
   flex: 1;
-}
-
-.registration__steps {
-  margin: 20px 0;
-  padding-left: 20px;
-}
-
-.registration__step {
-  margin-bottom: 10px;
-  position: relative;
-  padding-left: 15px;
-}
-
-.registration__step::before {
-  content: "•";
-  color: #eab81f;
-  position: absolute;
-  left: 0;
 }
 
 .registration__cta {
@@ -389,17 +364,6 @@ section {
 .vip-table th {
   font-weight: 700;
   background-color: #f3f3f3;
-}
-
-/* Deposit Methods section */
-.deposit-methods {
-  background-color: #252526;
-  color: #fff;
-  padding: 50px 0;
-}
-
-.deposit-methods .section-title {
-  color: #eab81f;
 }
 
 .deposit-methods__content {
@@ -478,10 +442,6 @@ section {
   background-color: #252526;
   color: #fff;
   padding: 50px 0;
-}
-
-.app .section-title {
-  color: #eab81f;
 }
 
 .app__content {
@@ -570,10 +530,6 @@ section {
   padding: 50px 0;
 }
 
-.support .section-title {
-  color: #eab81f;
-}
-
 .support__content {
   display: flex;
   justify-content: space-between;
@@ -652,9 +608,6 @@ section {
   padding: 50px 0;
 }
 
-.faq .section-title {
-  color: #eab81f;
-}
 
 .faq__items {
   max-width: 800px;

@@ -1,0 +1,41 @@
+.orderedwrapper {
+    padding-left: 20px;
+    li{
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 15px;
+      &:before {
+        content: "•";
+        color: #eab81f;
+        position: absolute;
+        left: 0;
+      }
+    }
+}
+
+.section {
+    padding: 50px 0;
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+        > * {
+            flex: 1 1 50%;
+        }
+    }
+    &_dark{
+        background-color: #252526;
+        color: #fff;
+    }
+}
+
+.notlc-space{
+    > *:not(:last-child){
+      margin-bottom: 20px;
+    }
+}
+
+.mb-3{
+    margin-bottom: 30px;
+}
