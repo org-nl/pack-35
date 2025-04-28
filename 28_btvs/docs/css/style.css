@@ -92,6 +92,16 @@ ol {
   display: flex;
 }
 
+.header__cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .nav-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -149,27 +159,17 @@ ol {
 
 /* Main content */
 
-.main {
-  padding: 30px 0;
-}
-
-/* Section common styles */
-
-section {
-  margin-bottom: 50px;
-}
-
 .section-title {
   font-size: 2rem;
   font-weight: 700;
   text-align: center;
   margin-bottom: 30px;
-  color: #252526;
   position: relative;
   padding-bottom: 15px;
+  color: #eab81f;
 }
 
-.section-title::after {
+.section-title:after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -182,42 +182,16 @@ section {
   background-color: #eab81f;
 }
 
-/* Hero section */
-
-.hero {
-  padding: 40px 0;
-}
-
-.hero__title {
+.section-title_dark {
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 30px;
   color: #252526;
+  padding-bottom: 0;
 }
 
-.hero__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  gap: 30px;
-}
-
-.hero__text {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.hero__image {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+.section-title_dark:after {
+  display: none;
 }
 
 .info-table {
@@ -326,6 +300,14 @@ section {
           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+.scroll-top svg {
+  pointer-events: none;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  fill: #252526;
+}
+
 .scroll-top.show {
   opacity: 1;
   visibility: visible;
@@ -339,89 +321,16 @@ section {
           transform: translateY(-5px);
 }
 
+.scroll-top:hover svg {
+  fill: #fff;
+}
+
 .scroll-top__arrow {
   font-size: 1.5rem;
   font-weight: bold;
 }
 
-/* Registration section */
-
-.registration__image {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.registration__cta {
-  margin-top: 20px;
-}
-
-.registration__steps-images {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  gap: 20px;
-  margin-top: 30px;
-}
-
-.step-image {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  text-align: center;
-}
-
-.step-img {
-  border-radius: 8px;
-  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  margin-bottom: 10px;
-}
-
-.step-caption {
-  font-weight: 500;
-  color: #eab81f;
-}
-
 /* VIP Program section */
-
-.vip-program {
-  padding: 50px 0;
-}
-
-.vip-program__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 30px;
-}
-
-.vip-program__image {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.vip-program__text {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.vip-img {
-  border-radius: 8px;
-  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
 
 .vip-table {
   width: 100%;
@@ -441,37 +350,6 @@ section {
   background-color: #f3f3f3;
 }
 
-.deposit-methods__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 30px;
-}
-
-.deposit-methods__text {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.deposit-methods__image {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.deposit-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-
 .deposit-table th,
 .deposit-table td {
   padding: 12px 15px;
@@ -482,272 +360,6 @@ section {
 .deposit-table th {
   font-weight: 700;
   background-color: #333;
-}
-
-/* Bet Types section */
-
-.bet-types {
-  padding: 50px 0;
-}
-
-.bet-types__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 30px;
-}
-
-.bet-types__image {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.bet-types__text {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.bet-types-list {
-  margin-top: 20px;
-}
-
-.bet-type-item {
-  padding: 10px 0;
-  border-bottom: 1px solid #c6c5c8;
-  position: relative;
-  padding-left: 25px;
-}
-
-.bet-type-item::before {
-  content: "✓";
-  color: #eab81f;
-  position: absolute;
-  left: 0;
-  font-weight: bold;
-}
-
-/* App section */
-
-.app {
-  background-color: #252526;
-  color: #fff;
-  padding: 50px 0;
-}
-
-.app__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 30px;
-}
-
-.app__text {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.app__image {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.app-features {
-  margin: 20px 0;
-}
-
-.app-feature {
-  padding: 8px 0;
-  position: relative;
-  padding-left: 25px;
-}
-
-.app-feature::before {
-  content: "✓";
-  color: #eab81f;
-  position: absolute;
-  left: 0;
-  font-weight: bold;
-}
-
-.app__cta {
-  margin-top: 25px;
-}
-
-/* Bonuses section */
-
-.bonuses {
-  padding: 50px 0;
-}
-
-.bonuses__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 30px;
-}
-
-.bonuses__image {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.bonuses__text {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.bonuses-list {
-  margin-top: 20px;
-}
-
-.bonus-item {
-  padding: 8px 0;
-  position: relative;
-  padding-left: 25px;
-}
-
-.bonus-item::before {
-  content: "✓";
-  color: #eab81f;
-  position: absolute;
-  left: 0;
-  font-weight: bold;
-}
-
-.bonuses__cta {
-  margin-top: 25px;
-}
-
-/* Support section */
-
-.support {
-  background-color: #252526;
-  color: #fff;
-  padding: 50px 0;
-}
-
-.support__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 30px;
-}
-
-.support__text {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.support__image {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.support-methods {
-  margin-top: 20px;
-}
-
-.support-method {
-  padding: 8px 0;
-  position: relative;
-  padding-left: 25px;
-}
-
-.support-method::before {
-  content: "✓";
-  color: #eab81f;
-  position: absolute;
-  left: 0;
-  font-weight: bold;
-}
-
-/* Legal section */
-
-.legal {
-  padding: 50px 0;
-}
-
-.legal__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 30px;
-}
-
-.legal__image {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.legal__text {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.legal-points {
-  margin-top: 20px;
-}
-
-.legal-point {
-  padding: 8px 0;
-  position: relative;
-  padding-left: 25px;
-}
-
-.legal-point::before {
-  content: "✓";
-  color: #eab81f;
-  position: absolute;
-  left: 0;
-  font-weight: bold;
-}
-
-/* FAQ section */
-
-.faq {
-  background-color: #252526;
-  color: #fff;
-  padding: 50px 0;
 }
 
 .faq__items {
@@ -798,6 +410,7 @@ section {
   background-color: #252526;
   color: #c6c5c8;
   padding: 40px 0 20px;
+  border-top: 1px solid #444247;
 }
 
 .footer__container {
@@ -845,6 +458,11 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 15px;
   margin-bottom: 20px;
 }
@@ -885,6 +503,25 @@ section {
   left: 0;
 }
 
+.contentlist li {
+  padding: 10px 0;
+  border-bottom: 1px solid #c6c5c8;
+  position: relative;
+  padding-left: 25px;
+}
+
+.contentlist li:before {
+  content: "✓";
+  color: #eab81f;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.contentlist_notLines li {
+  border-bottom: none;
+}
+
 .section {
   padding: 50px 0;
 }
@@ -908,42 +545,32 @@ section {
           flex: 1 1 50%;
 }
 
+.section__caption {
+  font-weight: 500;
+  color: #eab81f;
+}
+
+.section__text > *:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.section__image img {
+  border-radius: 8px;
+  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+}
+
 .section_dark {
   background-color: #252526;
   color: #fff;
 }
 
-.notlc-space > *:not(:last-child) {
-  margin-bottom: 20px;
-}
-
-.mb-3 {
+.notlc-space-30 > *:not(:last-child) {
   margin-bottom: 30px;
 }
 
 @media (max-width: 768px) {
-  .hero__content,
-  .registration__content,
-  .vip-program__content,
-  .deposit-methods__content,
-  .bet-types__content,
-  .app__content,
-  .bonuses__content,
-  .support__content,
-  .legal__content {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-
-  .registration__steps-images {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-
   .header__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -964,10 +591,6 @@ section {
     font-size: 1.8rem;
   }
 
-  .hero__title {
-    font-size: 2rem;
-  }
-
   .content-nav__links {
     gap: 10px;
   }
@@ -985,13 +608,25 @@ section {
   }
 }
 
+@media (max-width: 767.98px) {
+  .section__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
+  .section__text {
+    width: 100%;
+  }
+}
+
 @media (max-width: 480px) {
   .section-title {
     font-size: 1.5rem;
-  }
-
-  .hero__title {
-    font-size: 1.8rem;
   }
 
   .button {
