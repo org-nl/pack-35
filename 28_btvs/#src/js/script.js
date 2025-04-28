@@ -25,21 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Add hover effect to buttons
-    const buttons = document.querySelectorAll('.button');
-
-    buttons.forEach(button => {
-        button.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-3px)';
-            this.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.2)';
-        });
-
-        button.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0)';
-            this.style.boxShadow = 'none';
-        });
-    });
-
     // Hide all FAQ answers initially
     document.querySelectorAll('.faq-answer').forEach(answer => {
         answer.style.display = 'none';
@@ -82,33 +67,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     top: offsetTop - 80, // Adjust for header height
                     behavior: 'smooth'
                 });
-            }
-        });
-    });
-
-    // Highlight active navigation link based on scroll position
-    window.addEventListener('scroll', function() {
-        const scrollPosition = window.scrollY;
-
-        // Get all sections
-        const sections = document.querySelectorAll('section[id]');
-
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100;
-            const sectionHeight = section.offsetHeight;
-            const sectionId = section.getAttribute('id');
-
-            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                // Remove active class from all links
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                });
-
-                // Add active class to corresponding link
-                const activeLink = document.querySelector(`.content-nav__link[href="#${sectionId}"]`);
-                if (activeLink) {
-                    activeLink.classList.add('active');
-                }
             }
         });
     });
