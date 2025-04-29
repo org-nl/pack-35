@@ -20,10 +20,10 @@ document.addEventListener('DOMContentLoaded', function() {
  * Initialize FAQ accordion functionality
  */
 function initFaqAccordion() {
-    const faqItems = document.querySelectorAll('.faq-item');
+    const faqItems = document.querySelectorAll('.qAzone-item');
 
     faqItems.forEach(item => {
-        const question = item.querySelector('.faq-item__question');
+        const question = item.querySelector('.qAzone-item__question');
 
         question.addEventListener('click', () => {
             // Toggle active class on the clicked item
@@ -71,14 +71,14 @@ function initScrollToTop() {
  * Initialize smooth scrolling for navigation links
  */
 function initSmoothScroll() {
-    const navLinks = document.querySelectorAll('.navigation__link');
+    const navLinks = document.querySelectorAll('.nvg__link');
 
     navLinks.forEach(link => {
         link.addEventListener('click', e => {
             e.preventDefault();
 
             // Close mobile menu if it's open
-            const navigation = document.querySelector('.navigation');
+            const navigation = document.querySelector('.nvg');
             if (navigation.classList.contains('open')) {
                 navigation.classList.remove('open');
                 document.body.style.overflow = '';
@@ -92,8 +92,8 @@ function initSmoothScroll() {
 
             if (targetElement) {
                 // Get the header height to adjust the scroll position
-                const headerHeight = document.querySelector('.header').offsetHeight;
-                const navHeight = document.querySelector('.navigation').offsetHeight;
+                const headerHeight = document.querySelector('.topBox').offsetHeight;
+                const navHeight = document.querySelector('.nvg').offsetHeight;
 
                 // Calculate the final scroll position
                 const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight - navHeight;
@@ -112,8 +112,8 @@ function initSmoothScroll() {
  * Initialize mobile navigation toggle
  */
 function initMobileNavigation() {
-    const navToggle = document.querySelector('.navigation__toggle');
-    const navigation = document.querySelector('.navigation');
+    const navToggle = document.querySelector('.nvg__toggle');
+    const navigation = document.querySelector('.nvg');
 
     // Toggle mobile menu when hamburger is clicked
     navToggle.addEventListener('click', () => {
@@ -130,8 +130,8 @@ function initMobileNavigation() {
     // Close mobile menu when clicking outside
     document.addEventListener('click', (e) => {
         if (navigation.classList.contains('open') &&
-            !e.target.closest('.navigation__wrapper') &&
-            !e.target.closest('.navigation__toggle')) {
+            !e.target.closest('.nvg__wrapper') &&
+            !e.target.closest('.nvg__toggle')) {
             navigation.classList.remove('open');
             document.body.style.overflow = '';
         }
@@ -143,7 +143,7 @@ function initMobileNavigation() {
  */
 function initActiveLinksOnScroll() {
     // Get all sections that correspond to nav links
-    const navLinks = document.querySelectorAll('.navigation__link');
+    const navLinks = document.querySelectorAll('.nvg__link');
     const navLinkIDs = Array.from(navLinks).map(link => link.getAttribute('href').substring(1));
     const sections = [];
 
@@ -161,8 +161,8 @@ function initActiveLinksOnScroll() {
         return;
     }
 
-    const list = document.querySelector('.navigation__list');
-    const listWrapper = document.querySelector('.navigation__wrapper');
+    const list = document.querySelector('.nvg__list');
+    const listWrapper = document.querySelector('.nvg__wrapper');
 
     function highlightNavOnScroll() {
         // Get current scroll position
@@ -188,7 +188,7 @@ function initActiveLinksOnScroll() {
 
         // Add .active class to the current section's link
         const currentSectionId = currentSection.getAttribute('id');
-        const correspondingLink = document.querySelector(`.navigation__link[href="#${currentSectionId}"]`);
+        const correspondingLink = document.querySelector(`.nvg__link[href="#${currentSectionId}"]`);
         if (correspondingLink) {
             correspondingLink.classList.add('active');
             let end = correspondingLink.offsetLeft - list.offsetLeft + correspondingLink.clientWidth;
