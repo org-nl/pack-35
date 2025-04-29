@@ -486,6 +486,9 @@ tr:nth-child(even) {
   transition: all 0.3s ease;
   font-size: 20px;
   box-shadow: 0 5px 15px rgba(100, 229, 247, 0.4);
+  svg{
+    transform: rotate(-180deg);
+  }
 }
 
 .scroll-top.show {
