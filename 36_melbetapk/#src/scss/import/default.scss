@@ -104,9 +104,6 @@ a:not([class]) {
   }
 }
 .goHeader {
-  position: fixed;
-  bottom: 120px;
-  right: 15px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -118,11 +115,14 @@ a:not([class]) {
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;
+  display: none;
   visibility: hidden;
   transition: all 0.3s;
   z-index: 99;
   box-shadow: 0 0 5px 2px rgba(245, 230, 95, 0.75);
+  margin-bottom: 32px;
+  margin-right: 15px;
+  pointer-events: visible;
 }
 @media (max-width: 767.98px) {
   .goHeader {
@@ -133,23 +133,32 @@ a:not([class]) {
   fill: #161616;
 }
 .goHeader.show {
-  opacity: 1;
+  display: flex;
   visibility: visible;
 }
 .goHeader:hover {
   background-color: #ecae03;
 }
 
-.placeBig {
+.placeWrap{
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   z-index: 88;
+  pointer-events: none;
+  &__goHeader{
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.placeBig {
   color: #fff;
   display: none;
   border-top: 1px solid rgb(80, 77, 77);
   background-color: var(--dark-color);
+  pointer-events: visible;
 }
 .placeBig__body {
   display: flex;
