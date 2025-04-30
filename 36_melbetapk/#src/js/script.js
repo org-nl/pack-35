@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   
     // FAQ Accordion
-    const faqQuestions = document.querySelectorAll('.faq-question');
+    const faqQuestions = document.querySelectorAll('.customer-questions-question');
   
     faqQuestions.forEach(question => {
       question.addEventListener('click', function() {
@@ -33,10 +33,11 @@ document.addEventListener('DOMContentLoaded', function() {
         faqItem.classList.toggle('active');
       });
     });
+    
 
     // Button scroll top
-    const backToTopButton = document.querySelector('.back-to-top');
-    const banner = document.querySelector('.banner');
+    const backToTopButton = document.querySelector('.goHeader');
+    const banner = document.querySelector('.placeBig');
     backToTopButton.addEventListener('click', function() {
         window.scrollTo({
             top: 0,
@@ -45,9 +46,19 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     function toggleBackToTopButton() {
+        let isShow = false;
+        if(window.scrollY+(window.outerHeight*1.5) > document.body.scrollHeight){
+            isShow = false;
+        }else{
+            isShow = true;
+        }
         if (window.pageYOffset > 300) {
             backToTopButton.classList.add('show');
-            banner.classList.add('show');
+            if(isShow){
+                banner.classList.add('show');
+            }else{
+                banner.classList.remove('show');
+            }
         } else {
             backToTopButton.classList.remove('show');
             banner.classList.remove('show');
