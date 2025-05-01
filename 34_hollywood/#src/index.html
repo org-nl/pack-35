@@ -6,10 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hollywoodbets South Africa — Online Casino and Betting Website</title>
     <meta name="description" content="Explore Hollywoodbets South Africa: Online Casino and Sports Betting. Bonuses, registration, games, and more. Learn how to register an account and play on the website.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    @@include('fonts/fonts-link.html')
+    @@include('../../../../scriptExtractor.html')
 </head>
 <body>
     <header class="header">
@@ -19,8 +18,8 @@
                     <img src="img/hollywood-bets-logo-new.png" alt="Hollywoodbets Logo" width="338" height="160">
                 </div>
                 <div class="header__buttons">
-                    <button type="button" class="link-button btn btn-big-text btn-with-back">Register</button>
-                    <button type="button" class="link-button btn btn-big-text btn-with-back">Download</button>
+                    <a class="link-button btn btn-big-text btn-with-back" href="">Register</a>
+                    <a class="link-button btn btn-big-text btn-with-back" href="">Download</a>
                 </div>
             </div>
         </div>
@@ -59,12 +58,12 @@
                                 <div class="bonus-text">Claim your welcome bonus today and start winning!</div>
 
                                 <div class="bonus-arrow">
-                                    <img src="img/yellow-arrow.svg" alt="arrow">
-                                    <img src="img/yellow-arrow.svg" alt="arrow">
+                                    <img src="img/yellow-arrow.svg" width="35" height="21" alt="arrow">
+                                    <img src="img/yellow-arrow.svg" width="35" height="21" alt="arrow">
                                 </div>
 
                                 <div class="bonus-button">
-                                    <button type="button" class="bonus-btn">Get Bonus</button>
+                                  <a class="bonus-btn" href="">Get Bonus</a>
                                 </div>
                             </div>
                         </div>
@@ -147,7 +146,7 @@
                         <h2>Hollywoodbets Bonuses</h2>
                         <div class="wp-block-image">
                             <div class="aligncenter size-full">
-                                <img src="img/bonuses-and-promotions.webp" alt="bonuses and promotions">
+                                <img src="img/bonuses-and-promotions.webp" width="1170" height="546" loading="lazy" alt="bonuses and promotions">
                             </div>
                         </div>
                         <p>Players can take advantage of attractive bonuses and promotions, with the primary one being the welcome package.</p>
@@ -170,7 +169,7 @@
                               <p>Click the "Register" button on the Hollywoodbets website or within the mobile app to access the registration panel. You can find this button in the top navigation bar.</p>
                             </div>
                             <div class="guide__image">
-                              <img src="img/bonuses-and-promotions.webp" alt="Registration step 1">
+                              <img src="img/bonuses-and-promotions.webp" loading="lazy" width="487" height="227" alt="Registration step 1">
                             </div>
                           </div>
                           <div class="guide__item">
@@ -181,7 +180,7 @@
                               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident sed est voluptate quae aliquam ex commodi non nemo, fuga quod?</p>
                             </div>
                             <div class="guide__image">
-                              <img src="img/rec-2-e1705483698369.webp" alt="Registration step 1">
+                              <img src="img/rec-2-e1705483698369.webp" loading="lazy" width="487" height="247" alt="Registration step 1">
                             </div>
                           </div>
                           <div class="guide__item">
@@ -191,7 +190,7 @@
                               <p>Create a secure password for your account and agree to the terms of use. It's recommended to use a strong password with a mix of letters, numbers, and special characters.</p>
                             </div>
                             <div class="guide__image">
-                              <img src="img/rec-4-e1705483723499.webp" alt="Registration step 1">
+                              <img src="img/rec-4-e1705483723499.webp" loading="lazy" width="487" height="238" alt="Registration step 1">
                             </div>
                           </div>
                         </div>
@@ -206,7 +205,7 @@
                         <h2>Hollywoodbets Online Casino</h2>
                         <div class="wp-block-image">
                             <div class="aligncenter size-full">
-                                <img src="img/online-casino.webp" alt="online casino">
+                                <img src="img/online-casino.webp" width="1170" height="546" loading="lazy" alt="online casino">
                             </div>
                         </div>
                         <p>Hollywoodbets offers a vast selection of over 1,600 online casino slots from 20 providers. Whether you like classic fruit machines or feature-rich games with progressive jackpots, there's a slot to suit your style and budget.</p>
@@ -221,7 +220,7 @@
                       <h2>Hollywoodbets Payment Methods</h2>
                       <div class="wp-block-image">
                           <div class="aligncenter size-full">
-                              <img src="img/payment-methods.webp" alt="online casino">
+                              <img src="img/payment-methods.webp" loading="lazy" width="1170" height="546" alt="online casino">
                           </div>
                       </div>
                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem tempore vitae autem nesciunt doloribus tempora, dignissimos adipisci suscipit quasi velit?</p>
@@ -231,7 +230,7 @@
                       <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h3>
                       <p>Lorem ipsum dolor sit amet.</p>
                       <ul class="listItems">
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia minima labore suscipit impedit quisquam soluta.</li>
+                        <li>Lorem <a href="">link example</a> ipsum dolor sit amet consectetur adipisicing elit. Quia minima labore suscipit impedit quisquam soluta.</li>
                         <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sunt temporibus quasi neque dolorum! Error?</li>
                         <li>Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
                       </ul>
@@ -245,6 +244,7 @@
                         <div class="multicolunm__item">
                           <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h3>
                           <p>Lorem ipsum dolor sit amet.</p>
+                          <img src="img/support-mane.webp" class="img-full-width" loading="lazy" width="570" height="266" alt="online casino">
                           <ul class="listItems">
                             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia minima labore suscipit impedit quisquam soluta.</li>
                             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sunt temporibus quasi neque dolorum! Error?</li>
@@ -259,6 +259,8 @@
                             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sunt temporibus quasi neque dolorum! Error?</li>
                             <li>Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
                           </ul>
+                          <img src="img/online-casino.webp" class="img-full-width" loading="lazy" width="570" height="266" alt="online casino">
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, tenetur praesentium quod rem soluta iusto. Provident, quidem sapiente. Repudiandae deserunt totam incidunt saepe ipsam. Amet cum quaerat dolorem, eos dignissimos eius libero, fugiat, eum rerum excepturi aperiam tempore laborum!</p>
                         </div>
                         <div class="multicolunm__item">
                           <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h3>
@@ -268,15 +270,7 @@
                             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sunt temporibus quasi neque dolorum! Error?</li>
                             <li>Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
                           </ul>
-                        </div>
-                        <div class="multicolunm__item">
-                          <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h3>
-                          <p>Lorem ipsum dolor sit amet.</p>
-                          <ul class="listItems">
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia minima labore suscipit impedit quisquam soluta.</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sunt temporibus quasi neque dolorum! Error?</li>
-                            <li>Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
-                          </ul>
+                          <img src="img/payment-methods.webp" class="img-full-width" loading="lazy" width="1170" height="546" alt="online casino">
                         </div>
                       </div>
                   </div>
@@ -312,11 +306,13 @@
             </div>
         </div>
     </main>
-    <div class="scroll-to-top" id="scrollToTopBtn">
+
+    <button class="scroll-to-top" id="scrollToTopBtn" aria-label="scroll to top">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <polyline points="18 15 12 9 6 15"></polyline>
       </svg>
-    </div>
+    </button>
+
     <footer>
         <div class="footer">
             <div class="container">
