@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const copyPromoBtn = document.getElementById('copy-promo');
     if (copyPromoBtn) {
         copyPromoBtn.addEventListener('click', function() {
-            const promoText = document.querySelector('.promo-text').textContent;
+            const promoText = document.querySelector('.promo-txt').textContent;
             navigator.clipboard.writeText(promoText)
                 .then(() => {
                     const originalText = copyPromoBtn.textContent;
@@ -20,9 +20,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Countdown timer functionality
     const countdownElements = {
-        hours: document.querySelector('.timer-item:nth-child(1) .timer-value'),
-        minutes: document.querySelector('.timer-item:nth-child(2) .timer-value'),
-        seconds: document.querySelector('.timer-item:nth-child(3) .timer-value')
+        hours: document.querySelector('.timer-i:nth-child(1) .timer-num'),
+        minutes: document.querySelector('.timer-i:nth-child(2) .timer-num'),
+        seconds: document.querySelector('.timer-i:nth-child(3) .timer-num')
     };
 
     // Set the initial countdown time (14 hours, 6 minutes, 12 seconds from now)
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Add hover effect to offer cards
-    const offerCards = document.querySelectorAll('.offer-card');
+    const offerCards = document.querySelectorAll('.offer');
     offerCards.forEach(card => {
         card.addEventListener('mouseenter', function() {
             this.style.transform = 'translateY(-5px)';
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // FAQ accordion functionality
-    const faqQuestions = document.querySelectorAll('.faq-question');
+    const faqQuestions = document.querySelectorAll('.faq-q');
 
     faqQuestions.forEach(question => {
         question.addEventListener('click', function() {

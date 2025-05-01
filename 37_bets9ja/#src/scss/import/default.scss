@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Reset and base styles */
 * {
   margin: 0;
@@ -19,33 +20,33 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   color: var(--primary-white);
   line-height: 1.6;
   font-size: 16px;
-  section, footer{
-    position: relative;
-    background-color: var(--primary-dark);
-    z-index: 2;
-  }
+}
+body section, body footer {
+  position: relative;
+  background-color: var(--primary-dark);
+  z-index: 2;
 }
 
 a {
   text-decoration: none;
   color: inherit;
-  &:not([class]){
-    text-decoration: underline;
-    &:hover{
-      opacity: 0.9;
-    }
-  }
+}
+a:not([class]) {
+  text-decoration: underline;
+}
+a:not([class]):hover {
+  opacity: 0.9;
 }
 
 ul, ol {
   list-style-position: inside;
 }
 
-.container {
+.layout-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
@@ -57,7 +58,7 @@ img {
 }
 
 /* Button styles */
-.btn {
+.button {
   display: inline-block;
   padding: 10px 20px;
   border-radius: 4px;
@@ -65,38 +66,38 @@ img {
   text-align: center;
   cursor: pointer;
   transition: all 0.3s ease;
-  &:after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(255,255,255,0.01);
-    pointer-events: none;
-  }
+}
+.button:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.01);
+  pointer-events: none;
 }
 
-.btn--login {
+.btn-login {
   background-color: transparent;
   border: 1px solid var(--primary-white);
   color: var(--primary-white);
 }
 
-.btn--signup, .btn--claim, .btn--offer {
+.btn-signup, .btn-claim, .btn-offer {
   background-color: var(--primary-green);
   border: none;
   color: var(--primary-white);
 }
 
-.btn--signup:hover, .btn--claim:hover, .btn--offer:hover {
+.btn-signup:hover, .btn-claim:hover, .btn-offer:hover {
   background-color: var(--secondary-green);
 }
 
-.btn--login:hover {
+.btn-login:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Header styles */
-.header {
-  background-color: #0d0935;
+.site-header {
+  background-color: var(--primary-dark);
   padding: 15px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   position: sticky;
@@ -104,18 +105,20 @@ img {
   z-index: 100;
 }
 
-.header__container {
+.header-wrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  @media (max-width:#{$md3}px) {
+}
+@media (max-width: 767.98px) {
+  .header-wrap {
     display: grid;
     row-gap: 10px;
     grid-template-columns: 1fr auto;
   }
 }
 
-.header__logo {
+.header-logo {
   max-width: 120px;
   display: flex;
   align-items: center;
@@ -126,41 +129,43 @@ img {
   width: auto;
 }
 
-.header__nav {
+.header-nav {
   display: block;
-  @media (max-width:#{$md3}px) {
+}
+@media (max-width: 767.98px) {
+  .header-nav {
     grid-column: span 2;
     grid-row: 2;
   }
 }
 
-.nav-list {
+.nav {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   list-style: none;
 }
 
-.nav-link {
+.nav-a {
   color: var(--primary-white);
   font-weight: 500;
 }
 
-.nav-link:hover {
+.nav-a:hover {
   color: var(--primary-green);
 }
 
-.header__mobile {
+.mobile-toggle {
   display: block;
 }
 
-.menu-icon {
+.icon-menu {
   width: 24px;
   height: 24px;
   cursor: pointer;
 }
 
-.header__buttons {
+.header-cta {
   display: flex;
   gap: 10px;
 }
@@ -178,12 +183,12 @@ img {
   z-index: 100;
 }
 
-.show-mobile-nav .nav-item {
+.show-mobile-nav .nav-i {
   margin-bottom: 15px;
 }
 
-.bg{
-  background-image: url('../img/bet9ja-background.webp');
+.background {
+  background-image: url("../img/bet9ja-background.webp");
   background-size: cover;
   background-position: center;
   padding: 60px 0;
@@ -197,20 +202,20 @@ img {
 }
 
 /* Hero section */
-.hero {
+.firstImpresion {
   background-color: transparent;
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, rgba(28, 35, 56, 0.1), rgba(28, 35, 56, 0.6));
-  }
+}
+.firstImpresion:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(28, 35, 56, 0.1), rgba(28, 35, 56, 0.6));
 }
 
-.hero__container {
+.firstImpresion-wrap {
   position: relative;
   z-index: 1;
   display: flex;
@@ -219,47 +224,50 @@ img {
   padding: 40px 20px;
 }
 
-.hero__content {
+.firstImpresion-body {
   flex: 1;
 }
 
-.hero__title {
+.firstImpresion-title {
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 20px;
   color: var(--primary-white);
 }
 
-.hero__bonus {
+.firstImpresion-bonus {
   background-color: rgba(28, 35, 56, 0.9);
   border-radius: 8px;
   padding: 20px;
   max-width: 500px;
-  @media (max-width:#{$md3}px) {
+}
+@media (max-width: 767.98px) {
+  .firstImpresion-bonus {
     max-width: none;
   }
 }
 
-.bonus-title {
+.bonus-h {
   font-size: 24px;
   font-weight: 700;
   color: #12ec71;
   margin-bottom: 15px;
+  font-family: "Arial";
 }
 
-.bonus-list {
+.bonus-ul {
   list-style: none;
   margin-bottom: 20px;
 }
 
-.bonus-item {
+.bonus-li {
   padding: 6px 0;
   font-size: 14px;
   position: relative;
   padding-left: 20px;
 }
 
-.bonus-item::before {
+.bonus-li::before {
   content: "•";
   color: var(--primary-green);
   font-weight: bold;
@@ -277,12 +285,12 @@ img {
   margin-bottom: 20px;
 }
 
-.promo-text {
+.promo-txt {
   font-weight: 700;
   letter-spacing: 1px;
 }
 
-.promo-copy {
+.promo-btn {
   background: none;
   border: none;
   color: var(--primary-green);
@@ -290,23 +298,23 @@ img {
   font-size: 12px;
 }
 
-.hero__image {
+.firstImpresion-media {
   display: flex;
   justify-content: center;
 }
 
-.hero-img {
+.firstImpresion-img {
   max-width: 350px;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* Limited offers section */
-.limited-offers {
+.section-offers {
   padding: 40px 0;
 }
 
-.limited-offers__container {
+.offers-wrap {
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -316,7 +324,7 @@ img {
   text-align: center;
 }
 
-.countdown-title {
+.countdown-h {
   font-size: 18px;
   margin-bottom: 15px;
   color: var(--primary-green);
@@ -329,7 +337,7 @@ img {
   gap: 15px;
 }
 
-.timer-item {
+.timer-i {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -338,16 +346,16 @@ img {
   padding: 5px 10px;
   min-width: 60px;
   position: relative;
-  :after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(255,255,255,0.01);
-    pointer-events: none;
-  }
+}
+.timer-i :after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.01);
+  pointer-events: none;
 }
 
-.timer-value {
+.timer-num {
   font-size: 20px;
   font-weight: 700;
 }
@@ -357,13 +365,13 @@ img {
   text-transform: uppercase;
 }
 
-.casino-offers {
+.casino-grid {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.offer-card {
+.offer {
   background-color: rgba(28, 35, 56, 0.8);
   border-radius: 8px;
   padding: 15px;
@@ -374,11 +382,11 @@ img {
   transition: transform 0.3s ease;
 }
 
-.offer-card:hover {
+.offer:hover {
   transform: translateY(-5px);
 }
 
-.offer-logo {
+.offer-brand {
   max-width: 120px;
   height: 60px;
   display: flex;
@@ -386,67 +394,67 @@ img {
   justify-content: center;
 }
 
-.offer-logo-img {
+.offer-img {
   max-height: 100%;
   max-width: 100%;
   object-fit: contain;
 }
 
-.offer-details {
+.offer-info {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
 }
 
-.offer-text {
+.offer-txt {
   font-weight: 600;
   text-align: center;
   font-size: 14px;
 }
 
 /* Info section */
-.info-section {
+.section-info {
   padding: 40px 0;
   background-color: var(--primary-blue);
   background-image: linear-gradient(to bottom, var(--primary-blue), var(--primary-dark));
 }
 
-.info-text {
+.info-txt {
   margin-bottom: 20px;
   font-size: 14px;
   text-align: justify;
 }
 
-.service-table_wrap{
+.service-wrap {
   overflow-x: auto;
 }
 
-.service-table, .transaction-table, .vip-table {
+.service-table, .tx-table, .vip-table {
   display: table;
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 20px;
 }
 
-.table-row {
+.t-row {
   display: table-row;
 }
 
-.table-header {
+.t-head {
   background-color: var(--table-header);
   font-weight: 700;
 }
 
-.table-row:nth-child(odd):not(.table-header) {
+.t-row:nth-child(odd):not(.t-head) {
   background-color: var(--table-row-odd);
 }
 
-.table-row:nth-child(even):not(.table-header) {
+.t-row:nth-child(even):not(.t-head) {
   background-color: var(--table-row-even);
 }
 
-.table-cell {
+.t-cell {
   display: table-cell;
   padding: 12px 15px;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -454,37 +462,37 @@ img {
 }
 
 /* Section styles */
-.bonus-program, .payment-processing, .sports-betting, .casino-gaming, .vip-program {
+.bonus-zone, .payment, .sports, .casino, .vip {
   padding: 40px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.section-title {
+.section-h {
   font-size: 28px;
   margin-bottom: 20px;
   color: var(--primary-white);
   text-align: center;
 }
 
-.section-text {
+.section-p {
   margin-bottom: 15px;
   font-size: 14px;
   text-align: justify;
 }
 
-.vip-tiers, .vip-numeric {
+.vip-list, .vip-num {
   list-style-type: none;
   margin-bottom: 20px;
   padding-left: 20px;
 }
 
-.vip-tier, .vip-numer {
+.vip-item, .vip-fig {
   position: relative;
   padding: 5px 0;
   padding-left: 20px;
 }
 
-.vip-tier::before, .vip-numer::before {
+.vip-item::before, .vip-fig::before {
   content: "•";
   color: var(--primary-green);
   font-weight: bold;
@@ -492,52 +500,52 @@ img {
   left: 0;
 }
 
-.vip-numeric {
+.vip-num {
   counter-reset: myCont;
 }
 
-.vip-numer::before {
-  content: counter(myCont)".";
+.vip-fig::before {
+  content: counter(myCont) ".";
   counter-increment: myCont;
 }
 
-.subsection-title {
+.sub-h {
   font-size: 20px;
   margin: 20px 0 10px;
   color: var(--primary-green);
 }
 
-.subsection-text {
+.sub-p {
   margin-bottom: 15px;
   font-size: 14px;
 }
 
 /* Sports betting and Casino gaming layouts */
-.sports-content, .casino-content {
+.sports-body, .casino-body {
   display: flex;
   flex-direction: column;
   gap: 30px;
   margin-top: 30px;
 }
 
-.sports-text, .casino-text {
+.sports-p, .casino-p {
   flex: 1;
 }
 
-.sports-list {
+.sports-ul {
   counter-reset: sports-counter;
   margin-bottom: 20px;
   list-style-type: none;
 }
 
-.sports-item {
+.sports-li {
   margin-bottom: 15px;
   padding-left: 30px;
   position: relative;
   counter-increment: sports-counter;
 }
 
-.sports-item::before {
+.sports-li::before {
   content: counter(sports-counter) ".";
   position: absolute;
   left: 0;
@@ -545,11 +553,11 @@ img {
   color: var(--primary-green);
 }
 
-.sports-international {
+.sports-global {
   padding-left: 30px;
 }
 
-.sports-image, .casino-image {
+.sports-img-wrap, .casino-img-wrap {
   order: -1;
 }
 
@@ -560,39 +568,39 @@ img {
 }
 
 /* Footer styles */
-.footer {
+.site-footer {
   background-color: #141414;
   padding: 40px 0 20px;
 }
 
-.footer__container {
+.footer-wrap {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
-.footer-text {
+.footer-txt {
   font-size: 12px;
   opacity: 0.8;
   text-align: justify;
 }
 
-.footer__links {
+.footer-links {
   display: flex;
   gap: 20px;
   justify-content: center;
 }
 
-.footer-link {
+.footer-a {
   font-size: 14px;
   color: var(--primary-green);
 }
 
-.footer-link:hover {
+.footer-a:hover {
   text-decoration: underline;
 }
 
-.footer__copyright {
+.footer-copy {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -600,7 +608,7 @@ img {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.copyright-text {
+.copy-txt {
   font-size: 12px;
   opacity: 0.7;
 }
@@ -610,26 +618,26 @@ img {
 }
 
 /* FAQ Section Styles */
-.faq-section {
+.faq {
   padding: 40px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.faq-container {
+.faq-list-wrap {
   display: flex;
   flex-direction: column;
   gap: 15px;
   margin-top: 30px;
 }
 
-.faq-item {
+.faq-i {
   background-color: rgba(28, 35, 56, 0.8);
   overflow: hidden;
   transition: all 0.3s ease;
-  border-bottom: 1px solid rgba(255, 255, 255, .1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.faq-question {
+.faq-q {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -638,7 +646,7 @@ img {
   position: relative;
 }
 
-.faq-title {
+.faq-h {
   font-size: 16px;
   font-weight: 600;
   color: var(--primary-white);
@@ -652,7 +660,7 @@ img {
 
 .faq-icon::before,
 .faq-icon::after {
-  content: '';
+  content: "";
   position: absolute;
   background-color: var(--primary-green);
   transition: all 0.3s ease;
@@ -672,36 +680,35 @@ img {
   left: 0;
 }
 
-.faq-item.active .faq-icon::before {
+.faq-i.active .faq-icon::before {
   transform: rotate(90deg);
   opacity: 0;
 }
 
-.faq-answer {
+.faq-a {
   padding: 0 20px;
   max-height: 0;
   overflow: hidden;
-  //transition: max-height 0.3s ease, padding 0.15s ease;
 }
 
-.faq-item.active .faq-answer {
+.faq-i.active .faq-a {
   padding: 0 20px 20px;
   max-height: 500px;
 }
 
-.faq-list {
+.faq-ul {
   list-style-type: none;
   margin: 10px 0;
   padding-left: 10px;
 }
 
-.faq-list-item {
+.faq-li {
   position: relative;
   padding: 5px 0 5px 20px;
   font-size: 14px;
 }
 
-.faq-list-item::before {
+.faq-li::before {
   content: "•";
   color: var(--primary-green);
   font-weight: bold;
@@ -710,45 +717,37 @@ img {
 }
 
 /* Media queries for responsive design */
-@media (min-width: #{$md3}px) {
-  .hero__container {
-      flex-direction: row;
-      align-items: center;
+@media (min-width: 767.98px) {
+  .firstImpresion-wrap {
+    flex-direction: row;
+    align-items: center;
   }
-
-  .hero__content {
-      flex: 1;
+  .firstImpresion-body {
+    flex: 1;
   }
-
-  .hero__image {
-      flex: 1;
+  .firstImpresion-media {
+    flex: 1;
   }
-
-  .casino-offers {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
+  .casino-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
-
-  .offer-card {
-      width: calc(33.333% - 20px);
-      flex-direction: column;
+  .offer {
+    width: calc(33.333% - 20px);
+    flex-direction: column;
   }
-
-  .sports-content, .casino-content {
-      flex-direction: row;
+  .sports-body, .casino-body {
+    flex-direction: row;
   }
-
-  .sports-image, .casino-image {
-      order: 2;
-      flex: 1;
+  .sports-img-wrap, .casino-img-wrap {
+    order: 2;
+    flex: 1;
   }
-
-  .sports-text, .casino-text {
-      flex: 1;
+  .sports-p, .casino-p {
+    flex: 1;
   }
-
   .sports-img, .casino-img {
-      max-width: 100%;
+    max-width: 100%;
   }
 }
