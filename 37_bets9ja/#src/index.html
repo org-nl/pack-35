@@ -6,9 +6,7 @@
     <title>Bet9ja: 500% Bonus on First 4 deposits</title>
     <meta name="description" content="Access Bet9ja's Canadian platform featuring 500% welcome bonus, extensive sports markets, casino games, and secure payment. Available across major provinces.">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    @@include('fonts/fonts-link.html')
 </head>
 <body>
     <!-- Header Section -->
@@ -16,7 +14,7 @@
         <div class="header__container container">
             <div class="header__logo">
                 <a href="/" class="logo-link">
-                    <img src="img/bet9ja-logo.webp" alt="Bet9ja Logo" class="logo-img">
+                    <img src="img/bet9ja-logo.webp" class="logo-img" width="53" height="20" alt="Bet9ja Logo">
                 </a>
             </div>
             <nav class="header__nav">
@@ -26,15 +24,19 @@
                     <li class="nav-item"><a href="/app/" class="nav-link">App</a></li>
                 </ul>
             </nav>
-            <div class="header__mobile">
+            <!-- <div class="header__mobile">
                 <img src="img/menu-icon.svg" alt="Menu" class="menu-icon">
-            </div>
+            </div> -->
             <div class="header__buttons">
                 <a href="/link/" class="btn btn--login">Login</a>
                 <a href="/link/" class="btn btn--signup">Sign Up</a>
             </div>
         </div>
     </header>
+
+    <div class="bg">
+
+    </div>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -52,14 +54,14 @@
                     </ul>
                     <div class="promo-code">
                         <span class="promo-text">GET650CAD</span>
-                        <button class="promo-copy" id="copy-promo">Promo code copied</button>
+                        <button class="promo-copy" id="copy-promo" data-success="Copied!">Copy promo code</button>
                     </div>
                     <a href="/link/" class="btn btn--claim">Claim your bonus now!</a>
                 </div>
             </div>
             <div class="hero__image">
                 <a href="/link/">
-                    <img src="img/casino-bonus-preview.webp" alt="casino bonus preview" class="hero-img">
+                    <img src="img/casino-bonus-preview.webp" class="hero-img" loading="lazy" width="350" height="385" alt="casino bonus preview">
                 </a>
             </div>
         </div>
@@ -90,7 +92,7 @@
             <div class="casino-offers">
                 <div class="offer-card">
                     <div class="offer-logo">
-                        <img src="img/rolling-slots-logo.webp" alt="Rolling Slots Logo" class="offer-logo-img">
+                        <img src="img/rolling-slots-logo.webp" class="offer-logo-img" loading="lazy" width="120" height="40" alt="Rolling Slots Logo">
                     </div>
                     <div class="offer-details">
                         <p class="offer-text">300% up to 3,000 + 300 FREE SPINS</p>
@@ -100,7 +102,7 @@
 
                 <div class="offer-card">
                     <div class="offer-logo">
-                        <img src="img/jackpot-city-logo.webp" alt="Jackpot City Logo" class="offer-logo-img">
+                        <img src="img/jackpot-city-logo.webp" class="offer-logo-img" loading="lazy" width="120" height="40" alt="Jackpot City Logo">
                     </div>
                     <div class="offer-details">
                         <p class="offer-text">Double Your First 4 Deposits Up to C$1600</p>
@@ -110,7 +112,7 @@
 
                 <div class="offer-card">
                     <div class="offer-logo">
-                        <img src="img/tonybet-logo.webp" alt="Tonybet Logo" class="offer-logo-img">
+                        <img src="img/tonybet-logo.webp" class="offer-logo-img" loading="lazy" width="120" height="33" alt="Tonybet Logo">
                     </div>
                     <div class="offer-details">
                         <p class="offer-text">Welcome Bonus: C$300 and 120 Free Spins</p>
@@ -129,31 +131,33 @@
             </p>
 
             <!-- Service Table -->
-            <div class="service-table">
-                <div class="table-row table-header">
-                    <div class="table-cell">Service Category</div>
-                    <div class="table-cell">Features Available</div>
-                    <div class="table-cell">Provincial Access</div>
-                </div>
-                <div class="table-row">
-                    <div class="table-cell">Sports Betting</div>
-                    <div class="table-cell">Full Access</div>
-                    <div class="table-cell">All Provinces</div>
-                </div>
-                <div class="table-row">
-                    <div class="table-cell">Casino Games</div>
-                    <div class="table-cell">500+ Options</div>
-                    <div class="table-cell">All Provinces</div>
-                </div>
-                <div class="table-row">
-                    <div class="table-cell">Virtual Sports</div>
-                    <div class="table-cell">24/7 Access</div>
-                    <div class="table-cell">All Provinces</div>
-                </div>
-                <div class="table-row">
-                    <div class="table-cell">Mobile Services</div>
-                    <div class="table-cell">iOS/Android</div>
-                    <div class="table-cell">All Provinces</div>
+            <div class="service-table_wrap">
+                <div class="service-table">
+                    <div class="table-row table-header">
+                        <div class="table-cell">Service Category</div>
+                        <div class="table-cell">Features Available</div>
+                        <div class="table-cell">Provincial Access</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">Sports Betting</div>
+                        <div class="table-cell">Full Access</div>
+                        <div class="table-cell">All Provinces</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">Casino Games</div>
+                        <div class="table-cell">500+ Options</div>
+                        <div class="table-cell">All Provinces</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">Virtual Sports</div>
+                        <div class="table-cell">24/7 Access</div>
+                        <div class="table-cell">All Provinces</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">Mobile Services</div>
+                        <div class="table-cell">iOS/Android</div>
+                        <div class="table-cell">All Provinces</div>
+                    </div>
                 </div>
             </div>
 
@@ -173,11 +177,11 @@
             <p class="section-text">
                 Payment deposit bonuses include:
             </p>
-            <ul class="bonus-program-list">
-                <li class="bonus-program-item">First deposit: 200% bonus up to $1,000</li>
-                <li class="bonus-program-item">Second deposit: 150% bonus up to $750</li>
-                <li class="bonus-program-item">Third deposit: 100% bonus up to $500</li>
-                <li class="bonus-program-item">Fourth deposit: 50% bonus up to $250</li>
+            <ul class="vip-tiers">
+                <li class="vip-tier">First deposit: 200% bonus up to $1,000</li>
+                <li class="vip-tier">Second deposit: 150% bonus up to $750</li>
+                <li class="vip-tier">Third deposit: 100% bonus up to $500</li>
+                <li class="vip-tier">Fourth deposit: 50% bonus up to $250</li>
             </ul>
             <p class="section-text">
                 To qualify for each bonus, a minimum deposit of $20 is required. The wagering requirement is 35 times the bonus amount, and players must meet these terms within 30 days.
@@ -197,26 +201,28 @@
             </p>
 
             <!-- Transaction Table -->
-            <div class="transaction-table">
-                <div class="table-row table-header">
-                    <div class="table-cell">Transaction Type</div>
-                    <div class="table-cell">Processing Time</div>
-                    <div class="table-cell">Daily Limit</div>
-                </div>
-                <div class="table-row">
-                    <div class="table-cell">Instant Deposit</div>
-                    <div class="table-cell">0-15 minutes</div>
-                    <div class="table-cell">$50,000</div>
-                </div>
-                <div class="table-row">
-                    <div class="table-cell">Bank Transfer</div>
-                    <div class="table-cell">1-3 days</div>
-                    <div class="table-cell">$100,000</div>
-                </div>
-                <div class="table-row">
-                    <div class="table-cell">Withdrawals</div>
-                    <div class="table-cell">24-72 hours</div>
-                    <div class="table-cell">$50,000</div>
+            <div class="service-table_wrap">
+                <div class="transaction-table">
+                    <div class="table-row table-header">
+                        <div class="table-cell">Transaction Type</div>
+                        <div class="table-cell">Processing Time</div>
+                        <div class="table-cell">Daily Limit</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">Instant Deposit</div>
+                        <div class="table-cell">0-15 minutes</div>
+                        <div class="table-cell">$50,000</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">Bank Transfer</div>
+                        <div class="table-cell">1-3 days</div>
+                        <div class="table-cell">$100,000</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">Withdrawals</div>
+                        <div class="table-cell">24-72 hours</div>
+                        <div class="table-cell">$50,000</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -251,7 +257,7 @@
                     </p>
                 </div>
                 <div class="sports-image">
-                    <img src="img/bet9ja-sportbook.webp" alt="Bet9ja Sportsbook" class="sports-img">
+                    <img src="img/bet9ja-sportbook.webp" class="sports-img" loading="lazy" width="565" height="276" alt="Bet9ja Sportsbook">
                 </div>
             </div>
         </div>
@@ -267,7 +273,7 @@
 
             <div class="casino-content">
                 <div class="casino-image">
-                    <img src="img/bet9ja-casino.webp" alt="Bet9ja Casino" class="casino-img">
+                    <img src="img/bet9ja-casino.webp" class="casino-img" loading="lazy" width="565" height="318" alt="Bet9ja Casino">
                 </div>
                 <div class="casino-text">
                     <h3 class="subsection-title">Table Games</h3>
@@ -309,24 +315,48 @@
             </ul>
 
             <!-- VIP Benefits Table -->
-            <div class="vip-table">
-                <div class="table-row table-header">
-                    <div class="table-cell">Tier Benefits</div>
-                    <div class="table-cell">Redemption Rate</div>
-                </div>
-                <div class="table-row">
-                    <div class="table-cell">Points Earned</div>
-                    <div class="table-cell">$1 = 1 point</div>
-                </div>
-                <div class="table-row">
-                    <div class="table-cell">Cashback Rate</div>
-                    <div class="table-cell">0.5% to 2.5%</div>
-                </div>
-                <div class="table-row">
-                    <div class="table-cell">Bonus Rates</div>
-                    <div class="table-cell">+5% to +20%</div>
+            <div class="service-table_wrap">
+                <div class="vip-table">
+                    <div class="table-row table-header">
+                        <div class="table-cell">Tier Benefits</div>
+                        <div class="table-cell">Redemption Rate</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">Points Earned</div>
+                        <div class="table-cell">$1 = 1 point</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">Cashback Rate</div>
+                        <div class="table-cell">0.5% to 2.5%</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">Bonus Rates</div>
+                        <div class="table-cell">+5% to +20%</div>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- VIP Program Section -->
+    <section class="vip-program">
+        <div class="container">
+            <h2 class="section-title">Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+            <p class="section-text">Membership tiers provide incremental benefits:</p>
+            <ul class="vip-tiers">
+                <li class="vip-tier">Bronze: 0-1000 points</li>
+                <li class="vip-tier">Silver: 1001-5000 points</li>
+                <li class="vip-tier">Gold: 5001-10000 points</li>
+                <li class="vip-tier">Platinum: 10000+ points</li>
+            </ul>
+            <ul class="vip-numeric">
+                <li class="vip-numer">Bronze: 0-1000 points</li>
+                <li class="vip-numer">Silver: 1001-5000 points</li>
+                <li class="vip-numer">Gold: 5001-10000 points</li>
+                <li class="vip-numer">Platinum: 10000+ points</li>
+            </ul>
+            <p class="section-text">Lorem ipsum <a href="">link example</a> dolor sit amet consectetur adipisicing elit. Voluptatem ipsa voluptatibus eum voluptates mollitia quos. Voluptates ad odio modi iure voluptatibus tempora quae expedita harum.</p>
+            <img src="img/bet9ja-casino.webp" class="casino-img" loading="lazy" width="565" height="318" alt="Bet9ja Casino">
         </div>
     </section>
 
@@ -418,7 +448,7 @@
                 <p class="copyright-text">
                     Copyright © 2025 bets9ja.com. All rights reserved.
                 </p>
-                <img src="img/footer-icon.svg" alt="Footer Icon" class="footer-icon">
+                <img src="img/bet9ja-logo.webp" class="footer-icon" loading="lazy" width="53" height="20" alt="Footer Icon">
             </div>
         </div>
     </footer>

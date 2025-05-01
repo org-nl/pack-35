@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
             navigator.clipboard.writeText(promoText)
                 .then(() => {
                     const originalText = copyPromoBtn.textContent;
-                    copyPromoBtn.textContent = 'Copied!';
+                    copyPromoBtn.textContent = copyPromoBtn.dataset.success;
                     setTimeout(() => {
                         copyPromoBtn.textContent = originalText;
                     }, 2000);
@@ -15,16 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 .catch(err => {
                     console.error('Failed to copy: ', err);
                 });
-        });
-    }
-
-    // Mobile menu toggle functionality
-    const menuIcon = document.querySelector('.menu-icon');
-    const navList = document.querySelector('.nav-list');
-
-    if (menuIcon && navList) {
-        menuIcon.addEventListener('click', function() {
-            navList.classList.toggle('show-mobile-nav');
         });
     }
 
@@ -93,14 +83,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Check if this item is already active
             const isActive = parentItem.classList.contains('active');
-
-            // Close all FAQ items
-            document.querySelectorAll('.faq-item').forEach(item => {
-                item.classList.remove('active');
-            });
-
-            // If the clicked item wasn't active, open it
-            if (!isActive) {
+            if (isActive) {
+                parentItem.classList.remove('active');
+            }else{
                 parentItem.classList.add('active');
             }
         });
@@ -121,26 +106,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-
-    // Add some additional CSS for mobile nav
-    const style = document.createElement('style');
-    style.textContent = `
-        .show-mobile-nav {
-            display: flex;
-            flex-direction: column;
-            position: absolute;
-            top: 60px;
-            left: 0;
-            width: 100%;
-            background-color: var(--primary-dark);
-            padding: 20px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            z-index: 100;
-        }
-
-        .show-mobile-nav .nav-item {
-            margin-bottom: 15px;
-        }
-    `;
-    document.head.appendChild(style);
 });
