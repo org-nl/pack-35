@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Initialize sidebar highlight on page load
+    // Initialize sidebar highlight on page load 
     highlightSidebarLink();
 
     // Update sidebar highlight on scroll
