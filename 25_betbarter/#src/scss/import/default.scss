@@ -242,6 +242,15 @@ section .btn{
   position: sticky;
   top: 0;
   z-index: 100;
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(to right, #D21E1F, #f11d1d, #D21E1F);
+  }
 }
 
 .header__boxContent {
@@ -301,7 +310,7 @@ section .btn{
   }
   @media (max-width:#{$md4}px) {
     width: 100%;
-    top: 120px;
+    top: 137px;
     &:before{
       display: none;
     }
@@ -321,7 +330,7 @@ section .btn{
     display: block;
   }
   @media (max-width:#{$md4}px) {
-    top: 120px;
+    top: 137px;
   }
 }
 
@@ -407,16 +416,6 @@ section .btn{
   padding: 60px 0;
   background-color: #103323; /* Main dark green background */
   position: relative;
-}
-
-.screenBox::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(to right, #D21E1F, #f11d1d, #D21E1F);
 }
 
 .screenBox__boxContent {
