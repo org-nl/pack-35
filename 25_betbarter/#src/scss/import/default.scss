@@ -9,7 +9,7 @@
 :root {
   --color-background: #103323; /* Dark green from 49ja site */
   --color-text: #ffffff;
-  --color-primary: #dfb162; /* Gold from 49ja site */
+  --color-primary: #FFCD1E; /* Gold from 49ja site */
   --color-secondary: #2f9953; /* Lighter green from 49ja site */
   --color-accent: #4db478; /* Another green variant */
   --color-gray: #d1d1d1;
@@ -49,6 +49,11 @@ a {
   transition: color 0.3s ease;
 }
 
+a:not([class]){
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
 ul, ol {
   list-style: none;
 }
@@ -78,6 +83,12 @@ ul, ol {
   cursor: pointer;
   @media (min-width:#{$md7}px) {
     display: none;
+  }
+}
+
+section .btn{
+  @media (max-width:#{$md4}px) {
+    width: 100%;
   }
 }
 
@@ -167,23 +178,32 @@ ul, ol {
 /* Button styles */
 .btn {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 8px 20px;
   border-radius: 4px;
   font-weight: 600;
+  font-size: 18px;
   text-align: center;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .btn--primary {
-  background-color: var(--color-primary);
-  color: #000; /* Dark text on gold button */
-  border: 1px solid var(--color-primary);
+  //background-color: var(--color-primary);
+  color: #FFF; /* Dark text on gold button */
+  //border: 1px solid var(--color-primary);
+  background: linear-gradient(to bottom, #eec60c 0, #e37d05 100%);
+  text-shadow: 0 1px 3px #000;
+  font-size: 18px;
+
+}
+
+.btn--large{
+  padding: 12px 24px;
 }
 
 .btn--primary:hover {
-  background-color: #c9964d; /* Darker gold on hover */
-  border-color: #c9964d;
+  background: linear-gradient(to bottom, #f7ca04 0, #ff8902 100%);
+  transition: all 0.3s ease;
 }
 
 .btn--login {
@@ -197,21 +217,27 @@ ul, ol {
   border-color: #2f6ca6;
 }
 
+.centeredBlock{
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .btn--register {
-  background-color: var(--color-red);
   color: #fff;
-  border: 1px solid var(--color-red);
+  background-image: linear-gradient(to bottom, #d63939 0, #c21b1b 100%);
+  text-shadow: 0 1px 3px #000;
 }
 
 .btn--register:hover {
-  background-color: #aa2213; /* Darker red on hover */
-  border-color: #aa2213;
+  background-image: linear-gradient(to bottom, #da1e1e 0, #f10e0e 100%);
 }
 
 /* Header styles */
 .header {
-  background-color: #1f5f3d; /* Slightly lighter green for header */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #13171E; /* Slightly lighter green for header */
+  //border-bottom: 1px solid #D21E1F;
   padding: 15px 0;
   position: sticky;
   top: 0;
@@ -236,9 +262,10 @@ ul, ol {
 }
 
 .logo__image {
-  //display: flex;
+  display: flex;
   max-width: 100%;
-  height: auto;
+  width: auto;
+  height: 50px;
 }
 
 .header__nav {
@@ -269,7 +296,7 @@ ul, ol {
       height: 100%;
       top: 0;
       left: 0;
-      background: linear-gradient(to bottom, var(--color-primary), var(--color-secondary), var(--color-blue));
+      //background: linear-gradient(to bottom, var(--color-primary), var(--color-secondary), var(--color-blue));
     }
   }
   @media (max-width:#{$md4}px) {
@@ -340,7 +367,7 @@ ul, ol {
 }
 
 .main-nav__link--active {
-  color: #e8c891;
+  color: var(--color-primary);
 }
 
 .main-nav__link--active::after {
@@ -389,7 +416,7 @@ ul, ol {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(to right, var(--color-primary), var(--color-secondary), var(--color-blue));
+  background: linear-gradient(to right, #D21E1F, #f11d1d, #D21E1F);
 }
 
 .screenBox__boxContent {
@@ -461,7 +488,7 @@ ul, ol {
 .sidebar__title {
   font-size: 1.3rem;
   margin-bottom: 15px;
-  color: #E8C891;
+  color: var(--color-primary);
   font-weight: 600;
 }
 
@@ -670,10 +697,6 @@ ul, ol {
   align-items: center;
   gap: 20px;
   text-align: center;
-}
-
-.logo--footer .logo__image {
-  max-height: 35px;
 }
 
 .footer__info {
