@@ -8,6 +8,9 @@
 
 :root {
   --color-brand: #F86523;
+  --light-color: #FAFBFC;
+  --light-color-2: #f3f3f3;
+  --border-color: #EBEBEB;
 }
 
 html {
@@ -19,7 +22,7 @@ body {
   font-family: "Roboto", sans-serif;
   line-height: 1.6;
   color: #252526;
-  background-color: #faf4fa;
+  background-color: #fff;
 }
 
 img {
@@ -46,12 +49,13 @@ ul, ol {
 
 /* Header */
 .toparea {
-  background-color: #252526;
+  background-color: var(--light-color);
   color: #fff;
   padding: 15px 0;
   position: sticky;
   top: 0;
   z-index: 100;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .toparea__container {
@@ -96,33 +100,38 @@ ul, ol {
 }
 
 .nav-link {
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 1.2rem;
+  font-weight: 700;
   transition: color 0.3s;
+  color: #677F87;
+  @media (max-width:#{$md4}px) {
+    font-size: 1rem;
+  }
 }
 
 .nav-link:hover {
   color: var(--color-brand);
 }
 
+section .button{
+  @media (max-width:#{$md4}px) {
+    width: 100%;
+  }
+}
+
 .button {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 6px 20px;
   border-radius: 4px;
   font-weight: 700;
   text-transform: uppercase;
   transition: all 0.3s ease;
   text-align: center;
+  position: relative;
   &:hover{
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   }
-}
-
-.button--primary {
-  background-color: var(--color-brand);
-  color: #fff;
-  border: 2px solid transparent;
   &:after {
     content: '';
     position: absolute;
@@ -132,20 +141,24 @@ ul, ol {
   }
 }
 
+.button--primary {
+  background-color: var(--color-brand);
+  color: #fff;
+  border: 2px solid transparent;
+}
+
 .button--primary:hover {
   background-color: #fff;
   color: #252526;
 }
 
 .button--secondary {
-  background-color: #252526;
-  color: #fff;
+  color: var(--color-brand);
   border: 2px solid var(--color-brand);
 }
 
 .button--secondary:hover {
-  background-color: var(--color-brand);
-  color: #252526;
+  background-color: rgba($color: #F86726, $alpha: 0.1);
 }
 
 /* Main content */
@@ -182,6 +195,10 @@ ul, ol {
 .info-table {
   width: 100%;
   border-collapse: collapse;
+}
+
+.info-table tr:first-child th, .info-table tr:first-child td{
+  border-top: 1px solid #c6c5c8;
 }
 
 .info-table th, .info-table td {
@@ -221,17 +238,17 @@ ul, ol {
 .content-nav__link {
   display: inline-block;
   padding: 10px 15px;
-  background-color: #252526;
+  background-color: #54798C;
   color: #fff;
   border-radius: 4px;
   font-weight: 500;
   transition: all 0.3s ease;
-  border: 1px solid #252526;
+  border: 1px solid #54798C;
 }
 
 .content-nav__link:hover {
-  background-color: var(--color-brand);
-  color: #252526;
+  background-color: #fff;
+  color: #54798C;
   transform: translateY(-3px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -250,7 +267,7 @@ ul, ol {
   right: 30px;
   width: 50px;
   height: 50px;
-  background-color: var(--color-brand);
+  background-color: #54798C;
   color: #252526;
   border: none;
   border-radius: 50%;
@@ -320,14 +337,15 @@ ul, ol {
 
 .faq-item {
   margin-bottom: 15px;
-  border: 1px solid #52a9b0;
+  border: 1px solid #54798C;
   border-radius: 5px;
   overflow: hidden;
 }
 
 .faq-question {
   padding: 15px 20px;
-  background-color: #333;
+  background-color: #54798C;
+  color: #fff;
   font-weight: 700;
   cursor: pointer;
   position: relative;
@@ -400,14 +418,14 @@ ul, ol {
 
 .social-link {
   padding: 8px 12px;
-  border: 1px solid #52a9b0;
+  border: 1px solid #54798C;
   border-radius: 4px;
   transition: all 0.3s;
 }
 
 .social-link:hover {
-  background-color: #52a9b0;
-  color: #252526;
+  background-color: #54798C;
+  color: #fff;
 }
 
 .bottomarea__copyright {
@@ -505,8 +523,9 @@ ul, ol {
   }
 }
 .section__caption {
-  font-weight: 500;
-  color: var(--color-brand);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #5D7179;
 }
 @media (max-width: 767.98px) {
   .section__text {
@@ -522,11 +541,7 @@ ul, ol {
   margin-bottom: 10px;
 }
 .section_dark {
-  background-color: #252526;
-  color: #fff;
-  .section-title{
-    color: #fff;
-  }
+  background-color: #f3f3f3;
 }
 
 .notlc-space-30 > *:not(:last-child) {
