@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Start auto-sliding
     function startSlideInterval() {
-        slideInterval = setInterval(nextSlide, 500000); // Change slide every 5 seconds
+        slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
     }
 
     // Stop auto-sliding
