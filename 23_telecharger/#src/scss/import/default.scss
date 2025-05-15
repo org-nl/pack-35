@@ -133,6 +133,7 @@ ul, ol {
   flex-direction: column;
   justify-content: space-between;
   width: 30px;
+  flex: 0 0 30px;
   height: 22px;
   cursor: pointer;
   z-index: 102;
@@ -331,6 +332,14 @@ section {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: ease-in 0.15s;
+  visibility: hidden;
+  opacity: 0;
+  &.active{
+    transition: ease-out 0.15s;
+    visibility: visible;
+    opacity: 1;
+  }
 }
 .goUpBtn:after {
   content: "";
