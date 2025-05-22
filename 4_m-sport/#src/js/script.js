@@ -36,6 +36,30 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.style.overflow = '';
     }
   }
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return; // Skip empty anchors
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                // Calculate header height for offset
+                const headerHeight = document.querySelector('header').offsetHeight;
+
+                window.scrollTo({
+                    top: targetElement.offsetTop - headerHeight - 20, // Additional 20px padding
+                    behavior: 'smooth'
+                });
+
+                // Update URL without jumping
+                history.pushState(null, null, targetId);
+            }
+        });
+    });
 });
 
 // FAQ Accordion functionality
